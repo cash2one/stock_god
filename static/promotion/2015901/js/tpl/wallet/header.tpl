@@ -8,4 +8,5 @@
     <a class="btn" href="./deposit.html">充值牛币</a>
   </div>
   <a class="w-journal-link" href="./journal.html">交易明细</a>
+  <a class="w-packet" href="./packet.html">领取红包</a>
 </header>

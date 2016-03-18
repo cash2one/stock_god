@@ -201,7 +201,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['<%= cfg.src.sass %>/**/*.css'],
-        tasks: ['css', 'cssmin']
+        tasks: ['css']
       },
       tomd: {
         files: ['<%= cfg.src.tpls %>/**/*.tpl'],

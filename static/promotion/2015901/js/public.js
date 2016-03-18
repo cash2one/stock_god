@@ -76,6 +76,7 @@ var promotion = {
       cache: false,
       url: url,
       data: JSON.stringify(data),
+      //data: JSON.stringify($.extend({sessionUserId : 5},data)),
       dataType: "json",
       contentType: "application/json",
       success: callback,
@@ -662,7 +663,10 @@ var APIS = {
   saveGameBet: HOST.getHost() + "/gs_api/save_game_bet",
 
   //荐股初始化页面接口
-  initRcmdStk: HOST.getHost() + "/gs_api/fetch_init_rcmd_stk"
+  initRcmdStk: HOST.getHost() + "/gs_api/fetch_init_rcmd_stk",
+
+  //微信号是否绑定一起牛
+  isBind: HOST.getHost + "/gs_api/transfer_user_acc_cash"
 };
 
 //开发联调apis
@@ -726,7 +730,10 @@ var devAPIS = {
   saveGameBet: HOST.getHost() + "/gs_api/save_game_bet",
 
   //荐股初始化页面接口
-  initRcmdStk: HOST.getHost() + "/gs_api/fetch_init_rcmd_stk"
+  initRcmdStk: HOST.getHost() + "/gs_api/fetch_init_rcmd_stk",
+
+  //微信号是否绑定一起牛
+  isBind: HOST.getHost() + "/gs_api/transfer_user_acc_cash"
 };
 
 //假数据apis

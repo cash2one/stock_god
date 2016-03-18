@@ -701,26 +701,31 @@ var detailHandler = {
   //自定义分享
   defineShareContent: function (obj) {
 
-    if (obj.gameStatus === 0) {
+    if (obj.gameStatus === 0) {// 未开赛
       var differ = parseInt(obj.limitNum, 10) - parseInt(obj.num)
       window.dd = obj
-      var title = '我在玩【股神来了】群友荐股比赛.荐股pk,收益变红包！【还差' + differ + '人,帮我满上】';
+      var title = '我在玩【股神来了】群友荐股比赛.荐股pk,收益变红包！';
       var shareObj = {
         'differ': differ,
         'game': obj.gameName,
         'user': obj.userName,
         'time': promotion.competitionDate(promotion.checkDate(obj.startDate), promotion.checkDate(obj.endDate))
-      }
-      var desc = template('detail/share', shareObj)
+      };
+      var desc = template('detail/share', shareObj);
       var link = document.location.protocol + '//' + window.location.host + '/gs_api/oauth2API?redirectType=share_type&gameId=' + promotion.getUrlParam("gameId");
       var imgUrl = document.location.protocol + '//' + window.location.host + '/static/promotion/2015901/images/pic_share.jpg';
 
       promotion.wechatShow(false, title, desc, link, imgUrl);
 
-    } else if (obj.gameStatus === 1) {
+    } else if (obj.gameStatus === 1) { // 进行中
 
-      var title = '我在玩【股神来了】群友荐股比赛.荐股pk,收益变红包!【下注押我赢,押对赢牛币】';
-      var desc = '【下注押我赢,押对分牛币】“股神来了”帮你寻找朋友圈的真股神，速来参赛争夺百万微信红包！';
+      var title = '我在玩【股神来了】群友荐股比赛.荐股pk,收益变红包!';
+      var shareObj = {
+        'game': obj.gameName,
+        'user': obj.userName,
+        'time': promotion.competitionDate(promotion.checkDate(obj.startDate), promotion.checkDate(obj.endDate))
+      };
+      var desc = template('detail/share_ing',shareObj);
       var link = document.location.protocol + '//' + window.location.host + '/gs_api/oauth2API?redirectType=share_type&gameId=' + promotion.getUrlParam("gameId");
       var imgUrl = document.location.protocol + '//' + window.location.host + '/static/promotion/2015901/images/pic_share.jpg';
 

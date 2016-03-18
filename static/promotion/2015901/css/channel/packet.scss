@@ -1,0 +1,41 @@
+﻿/* wallet.html */
+@import "../variable";
+
+.p-header {
+  background-color: $bg-gray;
+  height: pxToRem(60px);
+  line-height: pxToRem(60px);
+  text-align: center;
+  color: $yellow;
+  font-size: pxToRem(16px);
+}
+.p-main {
+  text-align: center;
+  color: white;
+  padding: pxToRem(40px);
+  font-size: pxToRem(14px);
+  span {
+    color: $yellow;
+    font-weight: bold;
+  }
+  img {
+    margin-top: pxToRem(40px);
+  }
+  .p-btn {
+    height: pxToRem(40px);
+    line-height: pxToRem(40px);
+    text-align: center;
+    width: pxToRem(160px);
+    background-color: $orange;
+    border-radius: pxToRem(3px);
+    margin: pxToRem(40px) auto;
+  }
+}
+.p-note {
+  position: absolute;
+  height: pxToRem(20px);
+  width: pxToRem(100px);
+  border: solid 1px red;
+  top: pxToRem(185px);
+  left: pxToRem(40px);
+}

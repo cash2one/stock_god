@@ -42,6 +42,22 @@
       border-color: #6f5504;
     }
   }
+  .w-packet {
+    position: absolute;
+    top: pxToRem(10px);
+    left: pxToRem(10px);
+    display: block;
+    width: pxToRem(65px);
+    height: pxToRem(24px);
+    line-height: pxToRem(22px);
+    font-size: pxToRem(12px);
+    border: pxToRem(1px) solid #b9970d;
+    border-radius: pxToRem(12px);
+    color: #6f5504;
+    &.active {
+      border-color: #6f5504;
+    }
+  }
   .w-btn-box {
     padding: pxToRem(10px) 0;
   }

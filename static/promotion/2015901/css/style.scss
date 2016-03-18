@@ -7,6 +7,7 @@
 @import "./icons";
 @import "./animate";
 
+@import "./channel/packet";
 //状态
 .show {
   display: block !important;
@@ -303,6 +304,7 @@
 @import "./channel/deposit";
 @import "./channel/journal";
 @import "./channel/list";
+
 
 //荐股表格
 .r-list {
