@@ -1,0 +1,33 @@
+﻿{
+  "code":0,
+  "result":{
+    "currency":250.00,
+    "goods":[
+      {
+        "goodId":1,
+        "name":"50",
+        "price":5
+      },
+      {
+        "goodId":2,
+        "name":"100",
+        "price":9.9
+      },
+      {
+        "goodId":3,
+        "name":"200",
+        "price":19.5
+      },
+      {
+        "goodId":4,
+        "name":"300",
+        "price":29
+      },
+      {
+        "goodId":5,
+        "name":"500",
+        "price":48
+      }
+    ]
+  }
+}

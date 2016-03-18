@@ -1,0 +1,32 @@
+﻿{
+  "code":0,
+  "result":{
+    "total_bonus":100,
+    "datas":[
+      {
+        "desc":"荐股盈利",
+        "remark":"",
+        "time":120010000,
+        "unitQty":2
+      },
+      {
+        "desc":"任务收入",
+        "remark":"",
+        "time":120010000,
+        "unitQty":5
+      },
+      {
+        "desc":"下注盈亏",
+        "remark":"比赛：王老吉股神比赛",
+        "time":120010000,
+        "unitQty":30
+      },
+      {
+        "desc":"荐股亏损",
+        "remark":"比赛：极大股神比赛",
+        "time":120010000,
+        "unitQty":-30
+      }
+    ]
+  }
+}

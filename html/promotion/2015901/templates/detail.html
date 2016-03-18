@@ -1,0 +1,245 @@
+@@include('_mate.html', { title:'股神来了' })
+
+<body>
+  <div class="page">
+    <!-- page-main -->
+    <div class="main no-padding-trl" id="main" style="display:none;">
+      <!-- advert -->
+      <div class="d-advert" id="advert">
+        <a href="javascript:void(0);" id="hongbao">开户红包，人人有份！</a>
+      </div>
+      <!-- header -->
+      <div class="d-header">
+        <h1><em></em>天下第一武道会</h1>
+        <div class="d-creator">
+          <i class="icon-user"></i>发起人：
+          <span>小城故事多</span>
+        </div>
+        <a href="#course">比赛规则</a>
+      </div>
+      <!-- d-info -->
+      <div class="d-info">
+        <ul class="clearfix">
+          <li>
+            <dl>
+              <dt>比赛日期：</dt>
+              <dd>4月25日-4月26日</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>开赛倒计时：</dt>
+              <dd class="countdown"><span class="hour">17</span>时<span class="minutes">05</span>分<span class="seconds">35</span>秒</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <!-- d-progress -->
+      <div class="d-progress">
+        <ul class="clearfix">
+          <li>召集进度</li>
+          <li>
+            <div class="bar">
+              <span><em></em></span>
+            </div>
+          </li>
+          <li>
+            <span class="text-blue">11</span>/20
+          </li>
+        </ul>
+      </div>
+      <!-- d-submit-btn -->
+      <div class="d-btn-wrap">
+        <div class="d-btn-box">
+          <a href="#" class="btn width-xl-12">分享召集朋友来赛</a>
+        </div>
+      </div>
+      <!-- d-list -->
+      <div class="d-list relative">
+        <div id="J_marking" class="d-marking">
+          <div class="pic">
+            <img src="../../../static/promotion/2015901/images/pic_marking_detail.png" alt="">
+          </div>
+          <div class="marking"></div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>盈亏</th>
+              <th>推荐人</th>
+              <th>下注<em class="icon-wenhao"></em></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="stk-name">康美药业<em></em></span>
+                <span class="text-blue">600345</span>
+              </td>
+              <td>
+                <span class="text-red text-right">+10.00%</span>
+              </td>
+              <td>
+                <span class="stk-person">千岛惠子<i class="icon-yazhu"></i></span>
+                <span class="text-blue text-center">80%</span>
+              </td>
+              <td>
+                <i class="icon-niubi"></i>
+                <em>600</em>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                康美药业
+                <span class="text-blue">600345</span>
+              </td>
+              <td>
+                <span class="text-green text-right">-6.09%</span>
+              </td>
+              <td>
+                <span class="stk-person">千岛惠子<i class="icon-yazhu"></i></span>
+                <span class="text-blue text-center">50%</span>
+              </td>
+              <td>
+                <i class="icon-niubi"></i>
+                <em>40</em>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- fixed-tabs -->
+    @@include('_footer.html', { active: '' })
+  </div>
+  <!-- 比赛规则弹窗 -->
+  <div id="dialogCourse">
+    <div class="simple-wrap d-rule">
+      <h3>股神来了说明：好友荐股比收益</h3>
+      <article class="courseText">
+        <h4>比赛时间</h4>
+        <p>默认为活动创建后的5个交易日内，<span class="text-yellow">比赛开始日9:30前</span>用户均可报名参加，比赛持续日期可支持最长3个月；</p>
+        <h4><span class="text-yellow">比赛盈亏</span></h4>
+        <p>成本价为比赛开始日<span class="text-yellow">开盘价</span>卖出价为比赛结束日的股票收盘价；
+        </p>
+        <h4>参赛次数
+        </h4>
+        <p>每人每天只能参与<span class="text-yellow">不超过5场</span>股神来了比赛，珍惜给好友推荐股票的机会哦；
+        </p>
+        <h4>比赛提醒
+        </h4>
+        <p>及时了解比赛进度，领取红包，关注一起牛公众号<span class="text-yellow">（yiqiniu-com）股神来了</span>和微信好友一起选牛股，比收益。看看谁是称霸朋友圈的真股神。
+        </p>
+      </article>
+      <div class="close-dialog-btn-wrap">
+        <a href="javascript:void(0);" class="btn ui-col-12 close-dialog-btn">OK，知道了!</a>
+      </div>
+    </div>
+  </div>
+  <!-- 广告弹窗内容 -->
+  <div class="dialog" id="advertHtml" style="display:none;">
+    <div class="simple-wrap game-intro">
+      <h3>百万微信红包送不停</h3>
+      <article>
+        <h4>1、发起红包</h4>
+        <p>奖励对象：比赛发起人
+          <br>
+          <span class="text-yellow">每天</span>发起的<span class="text-yellow">首场20人满员比赛</span>，且荐股取得<span class="text-yellow">正收益</span>
+          <br> 比赛结束时，获取
+          <span class="text-yellow">1-76元</span>随机微信红包，天天送哦</p>
+        <h4>2、最佳荐股理由</h4>
+        <p>每周精选10条最佳荐股理由
+          <br>可以正经，也可以是段子
+          <br>公众号中回复<span class="text-yellow">【荐股理由】</span>即可查阅（10月17日第一期）
+          <br>上榜者获得<span class="text-yellow">10-176元</span>随机微信红包</p>
+      </article>
+      <div class="close-dialog-btn-wrap">
+        <a href="javascript:void(0);" class="btn fixed-230">OK，知道了!</a>
+      </div>
+    </div>
+  </div>
+  <!-- 股票行情弹窗 -->
+  <div class="dialog" id="dialogInfo" style="display:none;">
+    <div class="simple-wrap stk-info">
+      <div class="ui-row">
+        <div class="ui-col-3">
+          <div class="gravatar">
+            <img src="../../../static/promotion/2015901/images/demo_user.jpg">
+          </div>
+        </div>
+        <div class="ui-col-9">
+          <div class="name">千岛惠子</div>
+          <div class="cause">爱他，给他一个机会！西部建设，我爱你</div>
+        </div>
+      </div>
+      <ul class="ui-row">
+        <li class="ui-col-6">
+          <span>鱼跃医疗</span>
+          <span>002223</span>
+        </li>
+        <li class="ui-col-6">
+          <span>22.08</span>
+          <span>8.08%</span>
+        </li>
+      </ul>
+      <ul class="ui-row">
+        <li class="ui-col-6">
+          <span>成本价</span>
+          <span>20.56</span>
+        </li>
+        <li class="ui-col-6">
+          <span>盈亏</span>
+          <span>8.08%</span>
+        </li>
+      </ul>
+      <div class="ui-box text-center">
+        <i class="icon-niubi"></i>余额：<span class="text-yellow">150</span>牛币
+      </div>
+      <div class="ui-box-p text-center">
+        <div class="quantity-form">
+          <a data-type="reduce" class="minus-btn active">-</a>
+          <input type="text" value="0" disabled="disabled" readonly />
+          <a data-type="add" class="plus-btn disabled">+</a>
+        </div>
+      </div>
+      <div class="ui-box-p text-center">
+        <a href="javascript:void(0);" class="btn width-fx-115 blue">充值牛币</a>
+        <a href="javascript:void(0);" class="btn width-fx-115">下注押他赢</a>
+      </div>
+    </div>
+  </div>
+  <!-- 分享提示 -->
+  <div class="dialog">
+    <div class="top-wrap wx-share">
+      <div class="text">点右上角，分享给朋友一起玩！</div>
+      <div class="arrows"><img src="../../../static/promotion/2015901/images/icon_share_arrows.png" /></div>
+    </div>
+  </div>
+  <!-- 关注 -->
+  <div class="dialog">
+    <div class="middle-wrap wx-attention">
+      <img src="../../../static/promotion/2015901/images/pic_erweima.jpg" />
+    </div>
+  </div>
+  <!-- 国信开户 -->
+  <div id="guosenHtml" style="display:none;">
+    <div class="simple-wrap no-border">
+      <a onclick="_hmt.push(['_trackEvent', 'changjiang_2015901', 'click', 'changjiang_2015901'])" href="http://wap.95579.com/cjekh/yqn/index.html">
+        <img src="../../../static/promotion/2015901/images/pic_changjiang_1.png?ver=20151128">
+      </a>
+      <div class="btn-box">
+        <a class="close-dialog-btn close-style-1" href="javascript:void(0);" style="display:none;"></a>
+      </div>
+    </div>
+  </div>
+  <!-- 页面加载动画 -->
+  <div class="ajax-loading" style="display:none;">
+    <div class="circle-a"></div>
+    <div class="circle-b"></div>
+  </div>
+  @@include('_commonJS.html')
+  <script src="../../../static/promotion/2015901/js/detail.js"></script>
+</body>
+
+</html>

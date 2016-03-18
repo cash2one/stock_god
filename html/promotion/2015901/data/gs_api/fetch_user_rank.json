@@ -1,0 +1,122 @@
+﻿{
+  "code": 0,
+  "result": {
+    "myRank": 5,
+    "myUserName": "千岛惠子",
+    "myUserIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+    "myTotalYield": 0.2588,
+    "myRcmdYield": 0.7725,
+    "myGrade": "Lv 10",
+    "myTitle": "涨停敢死队",
+    "datas": [
+      {
+        "rank": 1,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "王大喜",
+        "totalYield": 0.9585,
+        "rcmdYield": 0.9584,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 2,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "潘亮至",
+        "totalYield": 0.8585,
+        "rcmdYield": 0.9284,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 3,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "洪楚彬",
+        "totalYield": 0.7826,
+        "rcmdYield": 0.8884,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 4,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "林还价",
+        "totalYield": 0.7026,
+        "rcmdYield": 0.8684,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 5,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": 0.2588,
+        "rcmdYield": 0.8084,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 6,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": 0.2588,
+        "rcmdYield": 0.7884,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 7,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": 0.2588,
+        "rcmdYield": 0.7084,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 8,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": 0.2588,
+        "rcmdYield": 0.6984,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 9,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": 0.2588,
+        "rcmdYield": 0.7984,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 10,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": 0.2588,
+        "rcmdYield": 0.8884,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 11,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": 0.2588,
+        "rcmdYield": 0.9584,
+        "grade": "Lv 10",
+        "title": "股神"
+      },
+      {
+        "rank": 12,
+        "userIcon": "../../../static/promotion/2015901/images/demo_user_man.jpg",
+        "userName": "千岛惠子",
+        "totalYield": -0.2588,
+        "rcmdYield": 0.9584,
+        "grade": "Lv 10",
+        "title": "股神"
+      }
+    ]
+  }
+}

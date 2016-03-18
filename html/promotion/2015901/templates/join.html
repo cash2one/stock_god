@@ -1,0 +1,57 @@
+@@include('_mate.html', { title:'发起比赛' })
+
+<body>
+  <div class="page">
+    <!-- page-main -->
+    <div class="main" id="main" style="display:none;">
+      <header class="j-header">
+        <div class="gravatar-large">
+          <img src="../../../static/promotion/2015901/images/demo_user.jpg" id="gravatar">
+        </div>
+        <div class="j-steps">
+          <h3>发起<span class="text-yellow">股神来了</span>荐股比赛</h3>
+        </div>
+      </header>
+      <section class="j-form-wrap">
+        <dl>
+          <dt>我看好的股票</dt>
+          <dd>
+            <input type="text" class="form-control text" placeholder="代码/拼音/名称" id="searchInput">
+            <ul class="j-fuzzy" id="searchResult"></ul>
+            <div class="j-remark">仅支持A股,分级基金,可交易状态</div>
+          </dd>
+        </dl>
+        <dl>
+          <dt>我的看好理由</dt>
+          <dd>
+            <textarea maxlength="50" class="form-control textarea" placeholder="我看好这只股票的理由，50字内" id="reason"></textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt><span id="J_openLayer">投入模拟资金<em class="icon-wenhao"></em></span><a class="j-link-deposit" href="./wallet.html?ver=20151202">点击获取牛币</a></dt>
+          <dd class="j-select">
+            <select class="form-control select down" id="addNiuBi">
+
+            </select>
+            <div id="J_remark" class="j-remark"></div>
+          </dd>
+          <div id="J_marking" class="j-marking">
+            <div class="pic">
+              <img src="../../../static/promotion/2015901/images/pic_marking_join.png?ver=20151202" alt="">
+            </div>
+            <div class="marking"></div>
+          </div>
+        </dl>
+        <div class="j-btn-box">
+          <a href="javascript:void(0);" class="btn width-xl-12" id="joinBtn">提&nbsp;&nbsp;交</a>
+        </div>
+      </section>
+    </div>
+    <!-- fixed-tabs -->
+    @@include('_footer.html', { active:'create' })
+  </div>
+  @@include('_commonJS.html')
+  <script src="../../../static/promotion/2015901/js/join.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+/*TMODJS:{"version":7,"md5":"043f9e8542be8a3d66adebef9a93d50f"}*/
+template('detail/list','<div class="d-list relative" id="dList"> <div id="J_marking" class="d-marking"> <div class="pic"> <img src="../../../static/promotion/2015901/images/pic_marking_detail.png" alt=""> </div> <div class="marking"></div> </div> <table> <thead> <tr> <th>名称</th> <th>盈亏</th> <th> <div>推荐人</div> <div>胜率</div> </th> <th id="J_openLayer"> 下注 <em class="icon-wenhao"></em> </th> </tr> </thead> <tbody id="J_listBody">');

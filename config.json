@@ -1,0 +1,23 @@
+{
+  "src":
+  {
+    "html": "html/promotion/2015901",
+    "sass": "static/promotion/2015901/css",
+    "js": "static/promotion/2015901/js",
+    "libs": "static/common/js",
+    "images": "static/promotion/2015901/images",
+    "fonts": "static/promotion/2015901/fonts",
+    "tpls": "static/promotion/2015901/js/tpl",
+    "data": "data"
+  },
+  "dist":
+  {
+    "html": "dist/webstatic/promotion/2015901",
+    "sass": "dist/static/promotion/2015901/css",
+    "js": "dist/static/promotion/2015901/js",
+    "libs": "dist/static/common/js",
+    "images": "dist/static/promotion/2015901/images",
+    "fonts": "dist/static/promotion/2015901/fonts",
+    "data": "dist"
+  }
+}

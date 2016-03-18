@@ -1,0 +1,22 @@
+@@include('_mate.html', { title:'我的水平' })
+
+<body>
+  <div class="page">
+    <!-- page-main -->
+    <div class="main no-padding-trl bg-home" id="main">
+    </div>
+    <!-- fixed-tabs -->
+    @@include('_footer.html', { active:'home' })
+  </div>
+  <!-- 页面加载动画 -->
+  <div class="ajax-loading">
+    <div class="circle-a"></div>
+    <div class="circle-b"></div>
+  </div>
+  @@include('_commonJS.html')
+  <script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../../../static/common/js/libs/jquery.circliful.min.js"></script>
+  <script src="../../../static/promotion/2015901/js/home.js?ver=20151022"></script>
+</body>
+
+</html>

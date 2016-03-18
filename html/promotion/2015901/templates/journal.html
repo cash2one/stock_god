@@ -1,0 +1,34 @@
+@@include('_mate.html', { title:'明细' })
+
+<body>
+  <div class="page">
+    <!-- page-main -->
+    <div class="main no-padding-trl" id="main" style="display:block;">
+      <!-- advert -->
+      <header class="jo-advert"><!-- 广告 --></header>
+      <section class="jo-wrap">
+        <!-- tabs -->
+        <ul class="jo-tabs clearfix">
+          <li class="active">牛币</li>
+          <li>红包</li>
+        </ul>
+        <div class="jo-container"></div>
+      </section>
+
+    </div>
+
+    <!-- fixed-tabs -->
+    @@include('_footer.html', { active:'wallet' })
+  </div>
+  <!-- 页面加载动画 -->
+  <div class="ajax-loading">
+    <div class="circle-a"></div>
+    <div class="circle-b"></div>
+  </div>
+
+  @@include('_commonJS.html')
+  <script src="../../../static/common/js/libs/swiper.min.js"></script>
+  <script src="../../../static/promotion/2015901/js/journal.js"></script>
+</body>
+
+</html>

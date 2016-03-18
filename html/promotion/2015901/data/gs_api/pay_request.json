@@ -1,0 +1,10 @@
+﻿{
+  "code":0,
+  "result":{
+    "timestamp": "123421341234423",
+    "nonceStr": "nothing!",
+    "package": "package",
+    "signType": "SHA1",
+    "paySign": "paySign"
+  }
+}

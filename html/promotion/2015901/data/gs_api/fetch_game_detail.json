@@ -1,0 +1,62 @@
+﻿{
+  "code": 0,
+  "message": null,
+  "updateMsg": null,
+  "id": null,
+  "result": {
+    "gameName": "看你股票红不红",
+    "userName": "韩梅梅",
+    "startDate": "2016-1-01 20:53:20",
+    "endDate": "2016-01-10 20:53:29",
+    "num": 15,
+    "gameStatus": 1,
+    "time": 100010000,
+    "isJoin": 1,
+    "limitNum": 20,
+    "redAmount": 0,
+    "gameStk": [
+      {
+        "gameStkId": 100001,
+        "stkName": "康美药业",
+        "stkCode": "600345",
+        "hasReason": 1,
+        "changePct": 0,
+        "userName": "涂",
+        "isLike": 1,
+        "likeCnt": 2,
+        "rcmdYield": 0,
+        "isBet": 1,
+        "currencyNum": 200,
+        "amount": 0
+      },
+      {
+        "gameStkId": 100001,
+        "stkName": "康美药业",
+        "stkCode": "600345",
+        "hasReason": 0,
+        "changePct": 0.10,
+        "userName": "刘力",
+        "isLike": 1,
+        "likeCnt": 2,
+        "rcmdYield": 0,
+        "isBet": 0,
+        "currencyNum": 200,
+        "amount": 0
+      },
+      {
+        "gameStkId": 100001,
+        "stkName": "康美药业",
+        "stkCode": "600345",
+        "hasReason": 0,
+        "changePct": 0.10,
+        "userName": "test",
+        "isLike": 1,
+        "likeCnt": 2,
+        "rcmdYield": 0,
+        "isBet": 0,
+        "currencyNum": 200,
+        "amount": 600
+      }
+    ]
+  }
+}
