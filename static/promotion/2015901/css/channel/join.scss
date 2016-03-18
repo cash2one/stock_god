@@ -1,0 +1,68 @@
+﻿/* join.html 推荐股票页 */
+@import "../variable";
+
+.j-steps {
+  p.member-name {
+    padding-left: 0;
+    color: $gray;
+  }
+}
+
+.j-fuzzy {
+  display: none;
+  position: absolute;
+  top: pxToRem(54px);
+  z-index: 99;
+  width: 100%;
+  li {
+    padding: pxToRem(15px);
+    background-color: #575e70;
+    border-bottom: 1px solid #32353e;
+    font-size: pxToRem(14px);
+    color: $white;
+    em {
+      display: inline-block;
+      margin-left: pxToRem(15px);
+      padding: pxToRem(2px) pxToRem(8px);
+      border: 1px solid $orange;
+      color: $orange;
+      font-style: normal;
+    }
+  }
+}
+
+.j-remark {
+  padding-top: pxToRem(5px);
+  font-size: pxToRem(12px);
+  color: $light;
+}
+
+.j-link-deposit {
+  float: right;
+  color: $yellow;
+}
+
+.j-marking {
+  position: absolute;
+  z-index: 202;
+  top: 0;
+  left: 0;
+  display: none;
+  .pic {
+    position: absolute;
+    top: pxToRem(-57px);
+    left: pxToRem(1px);
+    z-index: 201;
+    width: pxToRem(284px);
+    height: pxToRem(135px);
+  }
+  .marking {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, .8);
+  }
+}

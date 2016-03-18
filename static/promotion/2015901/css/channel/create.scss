@@ -1,0 +1,126 @@
+﻿/* create.html 发起比赛页 */
+@import "../variable";
+
+.c-header,
+.j-header {
+  position: relative;
+  padding: pxToRem(8px) pxToRem(10px) pxToRem(10px) pxToRem(64px);
+  border-bottom: 1px dashed $border-color;
+  .gravatar-large {
+    position: absolute;
+    top: pxToRem(8px);
+    left: pxToRem(2px);
+  }
+}
+
+//步骤
+.c-steps,
+.j-steps {
+  h3 {
+    font-size: pxToRem(18px);
+    height: pxToRem(50px);
+    line-height: pxToRem(50px);
+    color: $white;
+    text-align: left;
+    font-weight: normal;
+  }
+  p {
+    padding-left: pxToRem(77px);
+    font-size: pxToRem(14px);
+    text-align: left;
+    color: $white;
+    em {
+      font-style: normal;
+      color: $orange;
+    }
+  }
+}
+
+//表单
+.c-form-wrap,
+.j-form-wrap {
+  dl {
+    position: relative;
+    padding-top: pxToRem(14px);
+  }
+  dt {
+    font-size: pxToRem(12px);
+    color: $gray;
+  }
+  dd {
+    position: relative;
+    padding: pxToRem(6px) 0;
+    span {
+      position: absolute;
+      top: pxToRem(22px);
+      z-index: 2;
+      font-size: pxToRem(10px);
+      color: $notice-color;
+    }
+    .c-text-date {
+      right: pxToRem(38px);
+    }
+    .c-text-time {
+      left: pxToRem(100px);
+      color: $white;
+    }
+    .c-text-person {
+      left: pxToRem(28px);
+      color: $white;
+    }
+  }
+}
+
+//规则
+.c-rule,
+.d-rule {
+  h3 {
+    padding-left: pxToRem(5px);
+    border-left: pxToRem(2px) solid $orange;
+    font-size: pxToRem(14px);
+    height: pxToRem(14px);
+    line-height: pxToRem(14px);
+    color: $white;
+    font-weight: normal;
+  }
+  article {
+    padding: pxToRem(15px) 0;
+    h4 {
+      padding-left: pxToRem(5px);
+      font-size: pxToRem(14px);
+      font-weight: normal;
+      line-height: pxToRem(14px);
+      border-left: pxToRem(2px) solid $orange;
+      color: $white;
+    }
+    p {
+      margin: pxToRem(5px) 0 pxToRem(15px);
+      padding-left: pxToRem(7px);
+      font-size: pxToRem(12px);
+      color: $light;
+      line-height: pxToRem(16px);
+    }
+  }
+  .erweima {
+    margin: 0 auto;
+    width: pxToRem(220px);
+    span {
+      display: block;
+      line-height: pxToRem(30px);
+      font-size: pxToRem(14px);
+      color: $gray;
+      text-align: center;
+    }
+  }
+}
+
+.c-btn-box,
+.j-btn-box {
+  margin: pxToRem(24px) 0 pxToRem(30px);
+}
+
+.c-erweima {
+  margin: pxToRem(20px) auto;
+  width: pxToRem(200px);
+  height: pxToRem(200px);
+}

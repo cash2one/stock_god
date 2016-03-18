@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <!-- UC默认竖屏 ，UC强制全屏 -->
-    <!-- <meta name="full-screen" content="yes"/> -->
-    <!-- <meta name="browsermode" content="application"/> -->
-    <!-- QQ强制竖屏 QQ强制全屏 -->
-    <!-- <meta name="x5-orientation" content="portrait"/> -->
-    <!-- <meta name="x5-fullscreen" content="true"/> -->
-    <!-- <meta name="x5-page-mode" content="app"/> -->
-    <link href="" rel="apple-touch-icon-precomposed">
-    <link href="" sizes="114x114" rel="apple-touch-icon-precomposed">
-    <link href="../../../static/promotion/2015901/css/style.css" type="text/css" rel="stylesheet"/>
-
-    <title>我的水平</title>
-</head>
-
-
+@@include('_mate.html', { "title":"我的水平" })
 
 <body>
   <div class="page">
@@ -32,16 +9,16 @@
     <footer>
       <ul class="clearfix">
         <li>
-          <a class="" href="create.html?ver=20151202">发起比赛</a>
+          <a href="create.html?ver=20151202">发起比赛</a>
         </li>
         <li>
-          <a class="" href="list.html?ver=20151202">参赛记录</a>
+          <a href="list.html?ver=20151202">参赛记录</a>
         </li>
         <li>
           <a class="active" href="home.html?ver=20151202">我的水平</a>
         </li>
         <li>
-          <a class="" href="wallet.html?ver=20151202">钱包</a>
+          <a href="wallet.html?ver=20151202">钱包</a>
         </li>
       </ul>
     </footer>
@@ -51,17 +28,9 @@
     <div class="circle-a"></div>
     <div class="circle-b"></div>
   </div>
-  <script src="../../../static/common/js/libs/zepto.min.js"></script>
-  <script src="../../../static/common/js/libs/fx.js"></script>
-  <script src="../../../static/common/js/libs/fx_methods.js"></script>
-  <script src="../../../static/common/js/libs/fastclick.min.js"></script>
-  <script src="../../../static/common/js/libs/weixin-1.1.0.js"></script>
-  <script src="../../../static/promotion/2015901/js/public.js"></script>
-  <script src="../../../static/promotion/2015901/js/tpl/template.js"></script>
-  
+  @@include('_commonJS.html')
   <script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
   <script src="../../../static/common/js/libs/jquery.circliful.min.js"></script>
   <script src="../../../static/promotion/2015901/js/home.js?ver=20151022"></script>
 </body>
-
 </html>

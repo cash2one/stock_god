@@ -1,0 +1,91 @@
+﻿/* journal.html */
+@import "../variable";
+
+.jo-advert {
+  height: pxToRem(75px);
+  //background: url(../images/pic_banner.jpg) no-repeat 0 0;
+  background-size: 100%;
+}
+
+.jo-wrap {
+  padding-top: pxToRem(15px);
+  .jo-tabs {
+    margin: 0 auto;
+    width: pxToRem(280px);
+    font-size: pxToRem(12px);
+    li {
+      float: left;
+      width: pxToRem(140px);
+      padding: pxToRem(7px) pxToRem(6px);
+      background-color: #2c2e3a;
+      border: 1px solid #3c404b;
+      text-align: center;
+      color: #676e80;
+      cursor: pointer;
+      &:first-child {
+        border-top-left-radius: pxToRem(5px);
+        border-bottom-left-radius: pxToRem(5px);
+      }
+      &:last-child {
+        border-top-right-radius: pxToRem(5px);
+        border-bottom-right-radius: pxToRem(5px);
+      }
+      &.active {
+        background-color: $blue;
+        border-color: $blue;
+        color: #083435;
+      }
+    }
+  }
+  .jo-container {
+    margin: pxToRem(15px) auto 0;
+    .jo-box {
+      display: none;
+      margin: 0 auto;
+      &.active {
+        display: block;
+      }
+      .jo-tr {
+        padding: pxToRem(15px) pxToRem(10px);
+        background: #31353f;
+        border-top: 1px solid #262932;
+      }
+      .jo-thead {
+        padding: pxToRem(10px);
+        line-height: pxToRem(16px);
+        color: #a8b1c7;
+        background: #343843;
+        font-size: pxToRem(14px);
+        span {
+          font-size: pxToRem(16px);
+          color: #ffc600;
+        }
+      }
+      .left {
+        float: left;
+        h2 {
+          line-height: pxToRem(20px);
+          font-size: pxToRem(14px);
+          font-weight: 400;
+          color: #fff;
+        }
+        span {
+          line-height: pxToRem(16px);
+          font-size: pxToRem(12px);
+          color: #d4e0fa;
+        }
+      }
+      .right {
+        float: right;
+        span {
+          line-height: pxToRem(36px);
+          color: #ffc600;
+          font-size: pxToRem(16px);
+          &.loss {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -596,7 +596,7 @@ var HOST = {
 
   /*获取域名和端口*/
   getHost: function () {
-    return 'http://webapptest.ngrok.cc'
+    return 'http://192.168.1.19'
     //return window.location.protocol + "//" + window.location.host;
   }
 };

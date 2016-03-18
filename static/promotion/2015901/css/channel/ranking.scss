@@ -1,0 +1,90 @@
+﻿/* ranking.html 排名页面 */
+
+@import "../variable";
+
+.pd-002 {
+  padding-left: pxToRem(2px) !important;
+}
+.r-banner {
+  width: pxToRem(320px);
+  height: pxToRem(75px);
+}
+
+.r-own {
+  margin: pxToRem(15px) pxToRem(10px);
+  padding-top: pxToRem(10px);
+  background-color: #313540;
+  border-radius: pxToRem(4px);
+  color: $white;
+}
+
+.own-header {
+  h2 {
+    padding-left: pxToRem(8px);
+    height: pxToRem(18px);
+    line-height: pxToRem(18px);
+    border-left: pxToRem(2px) solid $orange;
+    font-size: pxToRem(18px);
+    font-weight: normal;
+  }
+}
+
+.own-content {
+  padding: pxToRem(10px);
+  .gravatar {
+    float: left;
+    width: pxToRem(50px);
+    height: pxToRem(50px);
+    border: pxToRem(2px) solid #575a61;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  dd {
+    float: left;
+    &.r-name {
+      margin-left: pxToRem(5px);
+      width: pxToRem(105px);
+      h2 {
+        padding-top: pxToRem(6px);
+        line-height: pxToRem(20px);
+        font-size: pxToRem(14px);
+        font-weight: 400;
+      }
+      span {
+        display: block;
+        line-height: pxToRem(18px);
+        font-size: pxToRem(12px);
+        color: $more-light;
+        em {
+          margin-right: pxToRem(2px);
+          font-style: normal;
+          color: $yellow;
+        }
+      }
+    }
+    &.r-yield {
+      margin-top: pxToRem(8px);
+      width: pxToRem(60px);
+      text-align: center;
+      &.r-gain {
+        margin-left: 0;
+        border-left: 1px solid #535864;
+      }
+      h2 {
+        line-height: pxToRem(14px);
+        font-size: pxToRem(12px);
+        font-weight: 400;
+        color: $gray;
+      }
+      span {
+        display: block;
+        margin-top: pxToRem(6px);
+        line-height: pxToRem(16px);
+        font-size: pxToRem(16px);
+        color: $blue;
+        text-align: center;
+      }
+    }
+  }
+}
+

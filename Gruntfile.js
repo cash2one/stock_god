@@ -40,7 +40,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: '<%= cfg.src.sass %>',
-            src: ['**/*.scss', '!common/**/*.scss'],
+            src: ['style.scss'],
             dest: '<%= cfg.dist.sass %>',
             ext: '.css'
           }
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= cfg.src.html %>',
           dest: '<%= cfg.dist.html %>',
-          src: ['**/*.html', '!common/**/*.html', '!template/**/*.html']
+          src: ['**/*.html', '!common/**/*.html']
         }]
       }
     },
@@ -200,7 +200,7 @@ module.exports = function(grunt) {
         }
       },
       sass: {
-        files: ['static/promotion/2015901/css/**/*.css'],
+        files: ['<%= cfg.src.sass %>/**/*.css'],
         tasks: ['css', 'cssmin']
       },
       tomd: {
@@ -208,7 +208,7 @@ module.exports = function(grunt) {
         tasks: ['tmod']
       },
       uglify: {
-        files: ['static/promotion/2015901/**/*.js'],
+        files: ['<%= cfg.src.js %>/**/*.js'],
         tasks: ['uglify']
       },
       other: {

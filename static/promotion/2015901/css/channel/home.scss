@@ -1,0 +1,435 @@
+﻿/* home.html */
+
+@import '../variable';
+.main.bg-home {
+  background-color: #313540;
+  height: 100%;
+}
+
+.h-header {
+  position: relative;
+  padding-left: pxToRem(80px);
+  padding-top: pxToRem(12px);
+  padding-bottom: pxToRem(12px);
+  color: $white;
+  background-color: #262932;
+  font-size: pxToRem(14px);
+  .info {
+    border-left: pxToRem(1px) dashed #323641;
+    padding-left: pxToRem(15px);
+    min-height: pxToRem(50px);
+    .name {
+      span {
+        font-size: pxToRem(12px);
+        color: $gray;
+        em {
+          font-style: normal;
+        }
+      }
+    }
+    .like-cate {
+      color: $gray;
+      font-size: pxToRem(12px);
+      span {
+        display: inline-block;
+        padding: 0 pxToRem(4px);
+        border-radius: pxToRem(10px);
+        font-size: pxToRem(12px);
+      }
+      span.text-yellow {
+        border: 1px solid $yellow;
+      }
+      span.text-blue {
+        border: 1px solid $blue;
+      }
+    }
+    .like-stk {
+      padding: pxToRem(5px) 0;
+      span {
+        display: inline-block;
+        padding: 0 pxToRem(4px);
+        border-radius: pxToRem(10px);
+        color: $orange;
+        border: 1px solid $orange;
+        font-size: pxToRem(12px);
+      }
+    }
+    .number {
+      color: $light;
+      font-size: pxToRem(12px);
+    }
+    span {
+      margin-right: pxToRem(4px);
+      &:first-child {
+        margin-left: pxToRem(4px);
+      }
+    }
+    .name,
+    .number,
+    .like {
+      margin-bottom: pxToRem(2px);
+    }
+  }
+  .info.no-gamenum {
+    .name {
+      margin-top: pxToRem(10px);
+    }
+  }
+  .gravatar {
+    position: absolute;
+    top: pxToRem(12px);
+    left: pxToRem(15px);
+    width: pxToRem(50px);
+    height: pxToRem(50px);
+    border: pxToRem(2px) solid #575a61;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+}
+
+.h-section {
+  padding: pxToRem(20px) pxToRem(10px);
+  background-color: #313540;
+}
+
+.h-tabs {
+  margin: 0 auto;
+  width: pxToRem(160px);
+  font-size: pxToRem(12px);
+  li {
+    float: left;
+    width: pxToRem(80px);
+    padding: pxToRem(7px) pxToRem(6px);
+    background-color: #2c2e3a;
+    border: 1px solid #3c404b;
+    text-align: center;
+    color: #676e80;
+    cursor: pointer;
+    &:first-child {
+      border-top-left-radius: pxToRem(5px);
+      border-bottom-left-radius: pxToRem(5px);
+    }
+    &:last-child {
+      border-top-right-radius: pxToRem(5px);
+      border-bottom-right-radius: pxToRem(5px);
+    }
+    &.active {
+      background-color: $blue;
+      border-color: $blue;
+      color: #083435;
+    }
+  }
+}
+
+.h-chart {
+  margin: pxToRem(10px) auto;
+  height: pxToRem(220px);
+  overflow: hidden;
+  .chart-box {
+    display: none;
+    margin: 0 auto;
+
+    &.active {
+      display: block;
+    }
+  }
+  .chart-1 {
+    position: relative;
+    margin-top: pxToRem(20px);
+    width: pxToRem(230px);
+    height: pxToRem(170px);
+    overflow: hidden;
+    .more1 {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: 10;
+      margin-left: pxToRem(-55px);
+      width: pxToRem(110px);
+      height: pxToRem(88px);
+      .txt1 {
+        font-size: pxToRem(36px);
+        color: $blue;
+        text-align: center;
+        i {
+          font-style: normal;
+          font-size: pxToRem(16px);
+        }
+      }
+      .txt2 {
+        font-size: pxToRem(12px);
+        color: $light;
+        text-align: center;
+        .icon-question-mark {
+          width: pxToRem(12px);
+          height: pxToRem(12px);
+          display: inline-block;
+          background: url(../images/2.png);
+          background-size: 100% auto;
+          position: relative;
+          left: 3px;
+          top: 1px;
+        }
+      }
+      .txt3 {
+        font-size: pxToRem(10px);
+        color: $light;
+        text-align: center;
+      }
+    }
+  }
+  .chart-2 {
+    position: relative;
+    width: pxToRem(220px);
+    height: pxToRem(220px);
+    .more2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      margin-left: pxToRem(-50px);
+      margin-top: pxToRem(-44px);
+      width: pxToRem(100px);
+      height: pxToRem(88px);
+      .txt1 {
+        font-size: pxToRem(16px);
+        color: #fff;
+        text-align: center;
+      }
+      .txt2 {
+        font-size: pxToRem(30px);
+        color: $blue;
+        text-align: center;
+        i {
+          font-style: normal;
+          font-size: pxToRem(16px);
+        }
+      }
+      .txt3 {
+        color: $light;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.h-btn-box {
+  padding: pxToRem(10px) 0;
+  text-align: center;
+  .btn{
+    height: 0.35rem;
+    padding: 0 .2rem;
+    line-height: 0.35rem;
+  }
+  .btn:first-child {
+    margin-right: pxToRem(15px);
+  }
+}
+
+.h-marking {
+  display: none;
+  .pic {
+    position: absolute;
+    top: pxToRem(190px);
+    left: pxToRem(35px);
+    z-index: 99;
+    width: pxToRem(191px);
+    height: pxToRem(177px);
+  }
+  .marking {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 98;
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+
+//仪表图
+.chart-board {
+  position: relative;
+  width: pxToRem(220px);
+  height: pxToRem(220px);
+  border-radius: 50%;
+  background: url(../images/bg_chart_board.jpg) repeat-y 0 0;
+  background-size: 100% auto;
+  .content {
+    position: absolute;
+    top: pxToRem(5px);
+    left: pxToRem(5px);
+    width: pxToRem(210px);
+    height: pxToRem(210px);
+    border-radius: 50%;
+    background-color: #313540;
+  }
+  .rote {
+    position: absolute;
+    top: pxToRem(80px);
+    z-index: 2;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right-width: pxToRem(110px);
+    border-left-width: pxToRem(110px);
+    border-bottom-width: pxToRem(90px);
+    border-top-width: 0;
+    border-style: solid;
+    border-color: transparent transparent #313540 transparent;
+  }
+  .rote:after {
+    display: block;
+    position: absolute;
+    top: pxToRem(89px);
+    left: pxToRem(-110px);
+    z-index: 99;
+    width: pxToRem(220px);
+    height: pxToRem(220px);
+    background-color: #313540;
+    content: '';
+  }
+  .simple {
+    position: absolute;
+    z-index: 1;
+    top: pxToRem(25px);
+    left: pxToRem(25px);
+    width: pxToRem(170px);
+    height: pxToRem(170px);
+    .cursor-wrap {
+      transition: transform .5s linear;
+      transform-origin: pxToRem(83px) pxToRem(-5px);
+      transform: rotate(-8deg);
+      top: pxToRem(85px);
+      left: 0;
+      position: absolute;
+      z-index: 9;
+
+      .cursor {
+        display: block;
+        width: pxToRem(14px);
+        height: pxToRem(20px);
+        background: url(../images/1.png) no-repeat;
+        background-size: 100% auto;
+        transform: rotate(-120deg);
+      }
+    }
+  }
+  .t1,
+  .t2,
+  .t3,
+  .t4,
+  .t5,
+  .t6,
+  .t7,
+  .t8,
+  .t9 {
+    display: inline-block;
+    color: #8990a0;
+    position: absolute;
+    font-weight: 700;
+    font-size: pxToRem(8px);
+    white-space:nowrap;
+  }
+  .t1 {
+    top: pxToRem(128px);
+    left: pxToRem(5px);
+            transform: rotate(-102deg);
+    -webkit-transform: rotate(-102deg);
+  }
+  .t2 {
+    top: pxToRem(82px);
+    left: pxToRem(3px);
+            transform: rotate(-80deg);
+    -webkit-transform: rotate(-80deg);
+  }
+  .t3 {
+    top: pxToRem(45px);
+    left: pxToRem(25px);
+            transform: rotate(-51deg);
+    -webkit-transform: rotate(-51deg);
+  }
+  .t4 {
+    top: pxToRem(20px);
+    left: pxToRem(58px);
+            transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+  }
+  .t5 {
+    top: pxToRem(11px);
+    left: pxToRem(105px);
+            transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+  }
+  .t6 {
+    top: pxToRem(20px);
+    left: pxToRem(135px);
+            transform: rotate(29deg);
+    -webkit-transform: rotate(29deg);
+  }
+  .t7 {
+    top: pxToRem(49px);
+    left: pxToRem(175px);
+            transform: rotate(51deg);
+    -webkit-transform: rotate(51deg);
+  }
+  .t8 {
+    top: pxToRem(87px);
+    left: pxToRem(188px);
+            transform: rotate(79deg);
+    -webkit-transform: rotate(79deg);
+  }
+  .t9 {
+    top: pxToRem(127px);
+    left: pxToRem(190px);
+            transform: rotate(106deg);
+    -webkit-transform: rotate(106deg);
+  }
+  .chart-pie {
+    width: pxToRem(170px);
+    height: pxToRem(170px);
+    background-color: #686f81;
+    border-radius: pxToRem(170px);
+    position: absolute;
+  }
+  .chart-pie1 {
+    clip: rect(0px, pxToRem(170px), pxToRem(170px), pxToRem(85px));
+         -o-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  .chart-pie2 {
+    clip: rect(0px, pxToRem(85px), pxToRem(170px), 0px);
+         -o-transform: rotate(-292deg);
+       -moz-transform: rotate(-292deg);
+    -webkit-transform: rotate(-292deg);
+  }
+  .chart-hold {
+    width: pxToRem(170px);
+    height: pxToRem(170px);
+    position: absolute;
+    z-index: 1;
+  }
+  .chart-hold1 {
+    clip: rect(0px, pxToRem(170px), pxToRem(170px), pxToRem(85px));
+  }
+  .chart-hold2 {
+    clip: rect(0px, pxToRem(85px), pxToRem(170px), 0px);
+  }
+  .chart-bg {
+    width: pxToRem(170px);
+    height: pxToRem(170px);
+    background-color: #00fcff;
+    border-radius: pxToRem(170px);
+    position: absolute;
+  }
+  .chart-mark {
+    width: pxToRem(164px);
+    height: pxToRem(164px);
+    margin: pxToRem(3px) 0 0 pxToRem(3px);
+    background-color: #313540;
+    border-radius: pxToRem(164px);
+    position: absolute;
+    z-index: 1;
+  }
+}

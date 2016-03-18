@@ -1,0 +1,110 @@
+﻿/* wallet.html */
+@import "../variable";
+
+.w-header {
+  position: relative;
+  padding: pxToRem(15px) pxToRem(10px) 0;
+  width: pxToRem(320px);
+  height: pxToRem(176px);
+  background: url(../images/bg_wallet.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+  color: #6f5504;
+  text-align: center;
+  .w-title {
+    h1 {
+      line-height: pxToRem(14px);
+      font-size: pxToRem(12px);
+      font-weight: 400;
+    }
+  }
+  .w-niubi {
+    padding: pxToRem(6px) 0 pxToRem(2px);
+    line-height: pxToRem(40px);
+    font-size: pxToRem(40px);
+  }
+  .w-cash {
+    line-height: pxToRem(20px);
+    font-size: pxToRem(12px);
+  }
+  .w-journal-link {
+    position: absolute;
+    top: pxToRem(10px);
+    right: pxToRem(10px);
+    display: block;
+    width: pxToRem(65px);
+    height: pxToRem(24px);
+    line-height: pxToRem(22px);
+    font-size: pxToRem(12px);
+    border: pxToRem(1px) solid #b9970d;
+    border-radius: pxToRem(12px);
+    color: #6f5504;
+    &.active {
+      border-color: #6f5504;
+    }
+  }
+  .w-btn-box {
+    padding: pxToRem(10px) 0;
+  }
+  .btn {
+    width: pxToRem(200px);
+  }
+}
+
+.w-task-wrap {
+  margin-top: pxToRem(15px);
+  .task-thead {
+    padding: 0 pxToRem(10px);
+    height: pxToRem(30px);
+    line-height: pxToRem(30px);
+    color: #a8b1c7;
+    background: #343843;
+    font-size: pxToRem(14px);
+  }
+  .task-tr {
+    display: block;
+    padding: pxToRem(15px) pxToRem(10px) pxToRem(15px) pxToRem(55px);
+    border-top: pxToRem(1px) solid #262932;
+    background-color: #31353f;
+    background-repeat: no-repeat;
+    background-size: pxToRem(25px) pxToRem(25px);
+    background-position: pxToRem(15px) center;
+    &.icon-001 {
+      border-left: pxToRem(2px) solid #ff5757;
+      background-image: url(../images/icon_task_1.png);
+    }
+    &.icon-002 {
+      border-left: pxToRem(2px) solid #ab5cfc;
+      background-image: url(../images/icon_task_2.png);
+    }
+    &.icon-003 {
+      border-left: pxToRem(2px) solid #0bdcbc;
+      background-image: url(../images/icon_task_3.png);
+    }
+    &.icon-004 {
+      border-left: pxToRem(2px) solid #fff557;
+      background-image: url(../images/icon_task_4.png);
+    }
+  }
+  .left {
+    float: left;
+    h2 {
+      line-height: pxToRem(20px);
+      font-size: pxToRem(14px);
+      font-weight: 400;
+      color: #fff;
+    }
+    span {
+      line-height: pxToRem(16px);
+      font-size: pxToRem(12px);
+      color: #d4e0fa;
+    }
+  }
+  .right {
+    float: right;
+    .btn {
+      height: pxToRem(36px);
+      line-height: pxToRem(36px);
+    }
+  }
+}
+

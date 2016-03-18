@@ -1,0 +1,150 @@
+﻿//栅格系统
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.ui-box {
+  margin: 0 auto;
+}
+
+.ui-box-p {
+  padding: pxToRem(5px) pxToRem(10px);
+}
+
+.ui-row:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.ui-col-1,
+.ui-col-2,
+.ui-col-3,
+.ui-col-4,
+.ui-col-5,
+.ui-col-6,
+.ui-col-7,
+.ui-col-8,
+.ui-col-9,
+.ui-col-10,
+.ui-col-11,
+.ui-col-12 {
+  float: left;
+}
+
+.ui-col-12 {
+  width: 100%;
+}
+
+.ui-col-11 {
+  width: 91.66666667%;
+}
+
+.ui-col-10 {
+  width: 83.33333333%;
+}
+
+.ui-col-9 {
+  width: 75%;
+}
+
+.ui-col-8 {
+  width: 66.66666667%;
+}
+
+.ui-col-7 {
+  width: 58.33333333%;
+}
+
+.ui-col-6 {
+  width: 50%;
+}
+
+.ui-col-5 {
+  width: 41.66666667%;
+}
+
+.ui-col-4 {
+  width: 33.33333333%;
+}
+
+.ui-col-3 {
+  width: 25%;
+}
+
+.ui-col-2 {
+  width: 16.66666667%;
+}
+
+.ui-col-1 {
+  width: 8.33333333%;
+}
+
+//字体
+.text-white {
+  color: $white !important;
+}
+
+.text-gray {
+  color: $gray !important;
+}
+
+.text-light {
+  color: $light !important;
+}
+
+.text-red {
+  color: $red !important;
+}
+
+.text-green {
+  color: $green !important;
+}
+
+.text-orange {
+  color: $orange !important;
+}
+
+.text-blue {
+  color: $blue !important;
+}
+
+.text-yellow {
+  color: $yellow !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-size-10 {
+  font-size: pxToRem(10px);
+}
+
+.text-size-12 {
+  font-size: pxToRem(12px);
+}
+
+.text-size-14 {
+  font-size: pxToRem(14px);
+}
+
+.text-size-16 {
+  font-size: pxToRem(16px);
+}
+
+.text-size-24 {
+  font-size: pxToRem(24px);
+}

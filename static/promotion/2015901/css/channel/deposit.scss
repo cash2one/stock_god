@@ -1,0 +1,67 @@
+﻿/* deposit.html 充值页面 */
+@import "../variable";
+
+.de-advert {
+  position: relative;
+  height: pxToRem(75px);
+  width: pxToRem(320px);
+  overflow: hidden;
+}
+
+.de-wrap {
+  padding: pxToRem(15px) pxToRem(10px);
+  .de-header {
+    padding-left: pxToRem(24px);
+    color: #fff;
+    font-size: pxToRem(14px);
+    background: url(../images/icon_niubi_1.png) no-repeat 0 center;
+    background-size: pxToRem(17px) pxToRem(17px);
+  }
+  .de-container {
+    padding-top: pxToRem(15px);
+  }
+  .de-goods {
+    display: block;
+    float: left;
+    margin-right: pxToRem(7.5px);
+    margin-bottom: pxToRem(7.5px);
+    padding-bottom: pxToRem(10px);
+    width: pxToRem(95px);
+    border-radius: pxToRem(6px);
+    border: pxToRem(1px) solid #4d5360;
+    background: #31353f;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    .goods-name {
+      padding: pxToRem(8px) 0 pxToRem(4px);
+      line-height: pxToRem(26px);
+      font-size: pxToRem(26px);
+      color: #ffc600;
+      text-align: center;
+      span {
+        font-size: pxToRem(12px);
+        color: #fff;
+      }
+    }
+    .goods-price {
+      padding: pxToRem(2px) 0;
+      font-size: pxToRem(14px);
+      text-align: center;
+      background: #4d5360;
+      color: #d4e0fa;
+    }
+    &.active {
+      border-color: #ffc600;
+      .goods-name {
+        span {
+          color: #ffc600;
+        }
+      }
+      .goods-price {
+        color: #705702;
+        background: #ffc600;
+      }
+    }
+  }
+}
