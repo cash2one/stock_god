@@ -312,4 +312,12 @@ $(document).ready(function() {
   //关闭微信分享
   promotion.wechatShow(true);
 
+  // 比赛名输入框删除时，清空
+  $('#competitionName').keydown(function(e) {
+    if(e.keyCode===8) {
+      $('#competitionName').val('');
+    }
+  });
+
+
 });

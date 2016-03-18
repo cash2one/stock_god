@@ -25,7 +25,7 @@ $(function() {
       var htmls = walletHandler.headerHtml(obj) + walletHandler.taskListHtml(obj)
 
       $("#main").html(htmls).fadeIn(250)
-
+      // 如果红包为零，领取红包不显示
     } else {
       dialog.warnPop(data.message);
     }
