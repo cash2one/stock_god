@@ -11,7 +11,7 @@
     </dt>
     <dd class="r-name">
       <h2>{{username}}</h2>
-      <span>{{#title}}</span>
+      <span class='r-level'>{{#title}}</span>
     </dd>
     <dd class="r-yield">
       <h2>推荐胜率</h2>

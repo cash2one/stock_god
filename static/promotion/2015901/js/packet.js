@@ -23,8 +23,8 @@ $(function() {
           }
           $('.p-container').html(_html);
         } else {
-          _html = template('packet/page',{'isBind':true,'yuan':yuan});
-          $('.p-container').html(_html);
+          //_html = template('packet/page',{'isBind':true,'yuan':yuan});
+          //$('.p-container').html(_html);
           console.log(data.message);
         }
         // 绑定下载一起牛跳转

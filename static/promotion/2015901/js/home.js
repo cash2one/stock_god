@@ -214,7 +214,7 @@ var homeHandler = {
 
     if (uId) {
       var title = '制霸朋友圈的股神竟然是TA！红包拿到手软！';
-      var desc = '“股神来了”帮你寻找朋友圈的真股神，速来参赛争夺百万微信红包！';
+      var desc = '“股神来了”帮你寻找朋友圈的真股神，速来参赛争夺百万红包！';
       var link = document.location.protocol + "//" + window.location.host + window.location.pathname + "?userId=" + uId;
       var imgUrl = document.location.protocol + "//" + window.location.host + "/static/promotion/2015901/images/pic_share.jpg";
 

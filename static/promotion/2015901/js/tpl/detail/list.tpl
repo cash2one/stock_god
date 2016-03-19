@@ -9,7 +9,7 @@
     <thead>
     <tr>
       <th>名称</th>
-      <th>盈亏</th>
+      <th class='d-col-2'>盈亏&darr;</th>
       <th>
         <div>推荐人</div>
         <div>胜率</div>

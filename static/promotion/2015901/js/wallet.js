@@ -35,5 +35,6 @@ $(function() {
       dialog.warnPop(data.message);
     }
   }, promotion.ajaxFail);
-
+  //关闭微信分享
+  promotion.wechatShow(true);
 });

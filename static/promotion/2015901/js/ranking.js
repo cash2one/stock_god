@@ -108,6 +108,9 @@ var rankingHandler = {
       var html = template('ranking/list', {});
 
       for (var i = 0; i < arr.length; i++) {
+        if(arr[i].userName.length > 6) {
+          arr[i].userName = arr[i].userName.substr(0,6) + '...';
+        }
 
         html += this.trHtml(arr[i]);
 

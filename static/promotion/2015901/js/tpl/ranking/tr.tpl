@@ -7,7 +7,7 @@
       </dt>
       <dd class="r-name">
         <h2>{{obj.userName}}</h2>
-        <span>{{#title}}</span>
+        <span class='r-level'>{{#title}}</span>
       </dd>
     </dl>
   </td>

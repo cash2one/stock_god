@@ -22,7 +22,7 @@
 
     <div class="chart-bg"></div>
     <div class="chart-mark"></div>
-    <div class="cursor-wrap">
+    <div class="cursor-wrap" style="display:none">
       <i class="cursor"></i>
     </div>
   </div>

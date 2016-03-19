@@ -317,5 +317,4 @@ $(document).ready(function() {
       $('#competitionName').val('');
   });
 
-
 });

@@ -202,14 +202,17 @@ var joiner = {
               initAmount: data.result.initAmount
             }
             $("#gravatar").attr("src", result.userIcon);
+
+            // 默认投入的资金
+            var select_value = Math.floor(data.result.balAmount / 2)
+            // 选择列表
             var list = []
-            for (i=0;i<=50;i++){
+            for (i=0;i<=select_value;i++){
               list.push(i);
             }
-            console.log(Math.floor(data.result.balAmount / 2))
-            var select_value = Math.floor(data.result.balAmount / 2)
-            select_value % 2 === 0 ? null : select_value ++
-            select_value = select_value > 100 ? 100 : select_value
+
+            //select_value % 2 === 0 ? null : select_value ++
+            //select_value = select_value > 100 ? 100 : select_value
             var select = template('join/select', {list: list,select_value: select_value})
             $("#addNiuBi").html(select);
             $("#main").fadeIn(250);
@@ -258,10 +261,10 @@ var joiner = {
   //投入模拟资金下拉的文字信息提示, 新老用户显示对应文字提示
   selectTips : function (result) {
     var tips = {
-      new: '模拟投资股票，赚收益。初始赠送'+ result.initAmount +'牛币',
-      many: '模拟投资股票, 赚收益. 初始赠送40牛币'
+      new: '模拟投资股票, 赚收益. 初始赠送40牛币',
+      many: '当前余额：<span class="j-note-bal">' + result.balAmount + '</span>牛币'
     }
-    $('#J_remark').text(result.isNew ? tips.new : tips.many)
+    $('#J_remark').html(result.isNew ? tips.new : tips.many)
   },
   //提交
   save       : function (result) {

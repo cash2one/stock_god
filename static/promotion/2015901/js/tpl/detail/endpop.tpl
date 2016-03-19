@@ -21,7 +21,7 @@
       </span>
       </p>
       {{if isWinner}}
-        <p class="text-size-12 text-red msg hidden">(兑换微信红包{{rmb}}元)</p>
+        <p class="text-size-12 text-red msg hidden">(兑换一起牛红包{{rmb}}元)</p>
       {{/if}}
       <p class="text-size-12 ui-row hidden"><span class="float-left">买码收益</span><span class="float-right"><i class="icon-niubi"></i>
       {{if betYield> 0}}

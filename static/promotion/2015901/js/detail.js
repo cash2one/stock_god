@@ -91,6 +91,7 @@ var detailHandler = {
 
           var showEndpop = localStorage.getItem(params.gameEventId)
           if (obj.gameStatus === 2 && obj.isJoin === 1 && !showEndpop) { // 用户已参加的比赛如果结束 并且当前这轮的比赛页面是首次进入才显示结果弹框
+
             detailHandler.endpop(params)
             localStorage.setItem(params.gameEventId, 'true')
           }
@@ -424,7 +425,7 @@ var detailHandler = {
       this.$pop = null
       this.$input = null
       this.tips = {
-        not: '余额不足, 请先充值牛币',
+        not: '下注至少需要10个牛币</br>立即充值',
         error: '请先添加牛币',
         success: '成功下注',
         max: '鸡蛋不要放在一个篮子里 每天最多押注30牛币哦'
@@ -570,7 +571,7 @@ var detailHandler = {
           rcmdYield: data.rcmdYield,// 荐股收益
           betYield: data.betYield, // 买码收益
           rmb: data.rmb === null ? 0 : data.rmb   // 牛币换算人名币
-        }
+        };
 
       dialog.commPop(id, function () {
 
@@ -598,28 +599,30 @@ var detailHandler = {
         function btnHandle() {
           var msg = {
             title: "我在玩【股神来了】群友荐股比赛.赢了" + _data.rmb + "元红包！不服你来一战。",
-            desc: '',
+            desc: '“股神来了”帮你寻找朋友圈的真股神，速来参赛争夺百万红包！',
             link: '',
-            imgUrl: ''
+            imgUrl: document.location.protocol + '//' + window.location.host + '/static/promotion/2015901/images/pic_share.jpg'
           }
+
           if (_data.isWinner) {
-            promotion.wxShareNotice()
-            promotion.wechatShow(false, msg.title, msg.desc, msg.link, msg.imgUrl)
+            promotion.wxShareNotice();
+            promotion.wechatShow(false, msg.title, msg.desc, msg.link, msg.imgUrl);
           }
           else {
-            location.href = 'create.html?ver=' + promotion.timeStamp
+            location.href = 'create.html?ver=' + promotion.timeStamp;
           }
         }
 
-        $pop.html(detailHandler.endpopHtml(_data)).fadeIn(200, textAnimate)
-        $pop.find('.handlebtn').on('click', btnHandle)
-        $pop.click(dialog.remove)
-      })
+        $pop.html(detailHandler.endpopHtml(_data)).fadeIn(200, textAnimate);
+        $pop.find('.handlebtn').on('click', btnHandle);
+        // 加上下面这句会导致分享没有了
+        //$pop.click(dialog.remove);
+      });
     }
 
     // 获取赛事结果数据
     promotion.ajax(API.fetchGameResult, {gameEventId: obj.gameEventId}, function (data) {
-      pop(data.result)
+      pop(data.result);
     }, promotion.ajaxFail)
   },
 

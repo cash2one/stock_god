@@ -214,9 +214,9 @@
 }
 
 .h-btn-box {
-  padding: pxToRem(0px) 0;
   text-align: center;
   .btn{
+    margin-top: pxToRem(-10px);
     height: 0.38rem;
     padding: 0 .2rem;
     line-height: 0.38rem;

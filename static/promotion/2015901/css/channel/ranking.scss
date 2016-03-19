@@ -29,6 +29,8 @@
   }
 }
 
+
+
 .own-content {
   padding: pxToRem(10px);
   .gravatar {
@@ -59,6 +61,7 @@
           margin-right: pxToRem(2px);
           font-style: normal;
           color: $yellow;
+          text-align: left;
         }
       }
     }
@@ -86,5 +89,19 @@
       }
     }
   }
+}
+
+
+// 以下是样式调整
+.r-level {
+  text-align: left;
+}
+
+.col-2-padding {
+  padding-left: pxToRem(40px) !important;
+}
+
+.col-4-light {
+  color: white !important;
 }
 

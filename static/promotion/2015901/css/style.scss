@@ -192,9 +192,9 @@
   //默认样式
   .simple-wrap {
     position: absolute;
-    top: 50%;
+    top: pxToRem(100px);
     left: 50%;
-    transform:translateY(-50%);
+    //transform:translateY(-50%);
     margin-left: pxToRem(-135px);
     width: pxToRem(270px);
     border-radius: pxToRem(2px);

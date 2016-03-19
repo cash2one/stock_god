@@ -12,14 +12,17 @@
 .p-main {
   text-align: center;
   color: white;
-  padding: pxToRem(40px);
+  padding: pxToRem(20px);
   font-size: pxToRem(14px);
   span {
     color: $yellow;
     font-weight: bold;
   }
   img {
-    margin-top: pxToRem(40px);
+    margin-top: pxToRem(20px);
+  }
+  .p-guide-img {
+    margin-top: pxToRem(0px);
   }
   .p-btn {
     color:white;
