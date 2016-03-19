@@ -704,7 +704,7 @@ var detailHandler = {
     if (obj.gameStatus === 0) {// 未开赛
       var differ = parseInt(obj.limitNum, 10) - parseInt(obj.num)
       window.dd = obj
-      var title = '我在玩【股神来了】群友荐股比赛.荐股pk,收益变红包！';
+      var title = '我在玩【股神来了】群友荐股比赛。荐股pk，收益变红包！';
       var shareObj = {
         'differ': differ,
         'game': obj.gameName,
@@ -712,6 +712,7 @@ var detailHandler = {
         'time': promotion.competitionDate(promotion.checkDate(obj.startDate), promotion.checkDate(obj.endDate))
       };
       var desc = template('detail/share', shareObj);
+
       var link = document.location.protocol + '//' + window.location.host + '/gs_api/oauth2API?redirectType=share_type&gameId=' + promotion.getUrlParam("gameId");
       var imgUrl = document.location.protocol + '//' + window.location.host + '/static/promotion/2015901/images/pic_share.jpg';
 
@@ -719,7 +720,7 @@ var detailHandler = {
 
     } else if (obj.gameStatus === 1) { // 进行中
 
-      var title = '我在玩【股神来了】群友荐股比赛.荐股pk,收益变红包!';
+      var title = '我在玩【股神来了】群友荐股比赛。荐股pk，收益变红包！';
       var shareObj = {
         'game': obj.gameName,
         'user': obj.userName,
@@ -735,7 +736,7 @@ var detailHandler = {
       window.dd = obj
       promotion.ajax(API.fetchGameResult, {gameEventId: detailHandler.gameId}, function (data) {
         detailHandler.bonus = data.result.rmb || 0
-        var title = '我在玩【股神来了】群友荐股比赛.赢了'+detailHandler.bonus+'元红包!不服你来一战.';
+        var title = '我在玩【股神来了】群友荐股比赛。赢了'+detailHandler.bonus+'元红包！不服你来一战。';
         var shareObj = {
           'differ': differ,
           'game': obj.gameName,
@@ -748,8 +749,6 @@ var detailHandler = {
 
         promotion.wechatShow(false, title, desc, link, imgUrl);
       }, promotion.ajaxFail)
-
-
     }
   },
 

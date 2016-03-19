@@ -155,8 +155,38 @@ var joiner = {
       }, 150);
     });
   },
+  //// 获取我的名字
+  //getUserInfo: function() {
+  //  var userId = promotion.getUrlParam("userId");
+  //  var params;
+  //
+  //  if (userId) {
+  //    params = {
+  //      gameUserId: userId
+  //    };
+  //
+  //    //隐藏掉导航
+  //    $("footer").remove();
+  //  } else {
+  //    params = {};
+  //  }
+  //
+  //  promotion.ajax(API.myInfo, {}, function(data) {
+  //
+  //    promotion.ajaxLoading("end");
+  //
+  //    if (data.code === 0) {
+  //
+  //      var obj = data.result;
+  //      $("#competitionName").val(obj.userName + "的荐股比赛")
+  //      promotion.ajax(API.initCreate, {}, creater.page,null);
+  //    } else {
+  //      dialog.warnPop(data.message);
+  //    }
+  //  }, promotion.ajaxFail);
+  //},
   //初始化页面
-  page       : function () {
+  page: function () {
     var gameId = promotion.getUrlParam("gameId");
     if (gameId) {
       var params = {

@@ -20,12 +20,17 @@ $(function() {
     promotion.ajaxLoading("end");
 
     if (data.code === 0) {
+
+
       var obj = data.result;
 
       var htmls = walletHandler.headerHtml(obj) + walletHandler.taskListHtml(obj)
 
       $("#main").html(htmls).fadeIn(250)
       // 如果红包为零，领取红包不显示
+      if(data.result.totalBonus === 0) {
+        $('.w-packet').hide();
+      }
     } else {
       dialog.warnPop(data.message);
     }

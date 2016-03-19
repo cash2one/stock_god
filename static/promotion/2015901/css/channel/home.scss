@@ -214,12 +214,12 @@
 }
 
 .h-btn-box {
-  padding: pxToRem(10px) 0;
+  padding: pxToRem(0px) 0;
   text-align: center;
   .btn{
-    height: 0.35rem;
+    height: 0.38rem;
     padding: 0 .2rem;
-    line-height: 0.35rem;
+    line-height: 0.38rem;
   }
   .btn:first-child {
     margin-right: pxToRem(15px);

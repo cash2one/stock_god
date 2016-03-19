@@ -6,6 +6,13 @@
     padding-left: 0;
     color: $gray;
   }
+  .j-game-name {
+    margin-top: pxToRem(-10px);
+  }
+  .j-user-name {
+    margin-top: pxToRem(-10px);
+    color: #b0b7d1;
+  }
 }
 
 .j-fuzzy {

@@ -7,7 +7,7 @@
     已发放到一起牛钱包
     </p>
     <img src="../../../static/promotion/2015901/images/packet_guide.png" alt=""/>
-    <div class="p-btn">去一起牛提现</div>
+    <a class="p-btn">去一起牛提现</a>
 </div>
 <div class="p-note"></div>
 {{ else }}
@@ -16,6 +16,6 @@
     <p>
     可提取红包<span>{{ yuan }}</span>元
     </p>
-    <div class="p-btn">绑定一起牛账号</div>
+    <a class="p-btn">绑定一起牛账号</a>
 </div>
 {{ /if }}

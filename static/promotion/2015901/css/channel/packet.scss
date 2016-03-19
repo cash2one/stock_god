@@ -22,6 +22,8 @@
     margin-top: pxToRem(40px);
   }
   .p-btn {
+    color:white;
+    display: block;
     height: pxToRem(40px);
     line-height: pxToRem(40px);
     text-align: center;
@@ -29,6 +31,10 @@
     background-color: $orange;
     border-radius: pxToRem(3px);
     margin: pxToRem(40px) auto;
+    &:active {
+      background-color: #E85200;
+      color:white;
+    }
   }
 }
 .p-note {
