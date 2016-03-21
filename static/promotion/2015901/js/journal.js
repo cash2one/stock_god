@@ -109,7 +109,6 @@ var journalHandler = {
   clickMoreBtn : function() {
 
     $(".load-more").on("click",function() {
-      console.log('click')
       var animateHtml =  '<div class="ajax-loading simple">'
         + '<div class="circle-a"></div>'
         + '<div class="circle-b"></div>'
@@ -185,55 +184,4 @@ var journalHandler = {
 $(document).ready(function() {
   journalHandler.advertRequest()
   journalHandler.journalRequest()
-
-  //$(document).on('click', '.load-more', function(){
-  //
-  //  var flag  = $('.jo-container .active').hasClass('niubi')
-  //
-  //  if (flag){
-  //    var params = {
-  //      count  : 10,
-  //      type   : 'V',
-  //      readId : readId
-  //    };
-  //
-  //    promotion.ajax(API.walletList, params, function(data) {
-  //
-  //      if (data.code === 0) {
-  //
-  //        var obj = data.result;
-  //
-  //        var _bonusListHtml = template('journal/bonusList', obj)
-  //
-  //        $('.niubi').append($(_bonusListHtml).html())
-  //
-  //      } else {
-  //        dialog.warnPop(data.message);
-  //      }
-  //    }, promotion.ajaxFail);
-  //
-  //  }else {
-  //    var params = {
-  //      count  : 10,
-  //      type   : 'C',
-  //      readId : readId2
-  //    };
-  //
-  //    promotion.ajax(API.walletList, params, function(data) {
-  //
-  //    if (data.code === 0) {
-  //
-  //      var obj = data.result;
-  //
-  //      var _redListHtml = template('journal/redList', redObj)
-  //
-  //      $('.cash').append($(_redListHtml).html())
-  //
-  //    } else {
-  //      dialog.warnPop(data.message);
-  //    }
-  //  }, promotion.ajaxFail);
-  //  }
-  //
-  //})
 });

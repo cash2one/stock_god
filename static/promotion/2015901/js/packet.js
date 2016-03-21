@@ -23,9 +23,10 @@ $(function() {
           }
           $('.p-container').html(_html);
         } else {
-          //_html = template('packet/page',{'isBind':true,'yuan':yuan});
-          //$('.p-container').html(_html);
-          console.log(data.message);
+          dialog.warnPop(data.message);
+          setTimeout(function() {
+            window.history.back();
+          },2000);
         }
         // 绑定下载一起牛跳转
         $('.p-btn').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.yiqiniu.android.yiqiniu');

@@ -291,7 +291,6 @@ var creater = {
 };
 
 $(document).ready(function() {
-   //var tempInput = '';
   creater.reqId = promotion.onlyNum();
   promotion.ajax(API.myInfo, {}, function(data) {
 
@@ -322,9 +321,4 @@ $(document).ready(function() {
       first = false;
     }
   });
-  //$('#competitionName').blur(function() {
-  //  if(!$('#competitionName').val()) {
-  //    $('#competitionName').val(tempInput);
-  //  }
-  //});
 });

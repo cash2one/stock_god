@@ -809,6 +809,6 @@ $(function () {
   promotion.fontSize();
   promotion.gotoTop();
   promotion.btnActiveBg();
-  //promotion.baidu();
-  //FastClick.attach(document.body);
+  promotion.baidu();
+
 });

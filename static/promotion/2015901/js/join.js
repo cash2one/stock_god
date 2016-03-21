@@ -214,7 +214,7 @@ var joiner = {
 
             // 默认投入的资金
             var raw_value = Math.floor(data.result.balAmount / 2)
-            select_value = raw_value % 2 === 0 ? raw_value : raw_value + 1;
+            var select_value = raw_value % 2 === 0 ? raw_value : raw_value + 1;
             // 选择列表
             var index = raw_value > 50 ? 50 : raw_value;
             var list = []

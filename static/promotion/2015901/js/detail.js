@@ -50,7 +50,6 @@ var detailHandler = {
   pageHtml: function () {
 
     var id = promotion.getUrlParam("gameId");
-    console.log(id);
     if (id) {
       detailHandler.gameId = id
       var params = {
@@ -207,7 +206,6 @@ var detailHandler = {
 
   //个股
   trHtml: function (obj) {
-    console.log(obj);
     if (obj) {
       obj = this.goChange(obj);
       var data = {
@@ -416,7 +414,6 @@ var detailHandler = {
     var gameStatus = obj.gameStatus
 
     var Pop = function (data) {
-      console.log(data)
       this.popId = 'stkInfoView'
       this.data = data
       if (gameStatus > 0) {

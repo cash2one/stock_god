@@ -35,7 +35,7 @@ var rankingHandler = {
           }, 500);
         }
       } else {
-        console.log(data.message);
+        dialog.warnPop(data.message);
       }
     }, promotion.ajaxFail);
   },
