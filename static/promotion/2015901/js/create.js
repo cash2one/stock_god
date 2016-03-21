@@ -34,8 +34,6 @@ var creater = {
 
         $.each(o.tradeDate, function(i, v) {
           startTime.append('<option value="' + v + '">' + v + '</option>');
-
-          //endTime.append('<option value="' + v + '">' + v + '</option>');
         });
 
 
@@ -48,19 +46,10 @@ var creater = {
           if(i>=1) return false;
             $('#v1').text(v)
         })
-        // var html = '';
-        // for( var a  in json){
-        //     html += '<option value="2">'+json[a]+'</option>';
-        // }
-        // endTime[0].innerHTML = html;
-         
-
-
 
         $("#main").fadeIn(250);
-
         creater.selectStartTime(creater.startTime, creater.endTime);
-        // creater.navChange();
+        creater.navChange();
       }
     } else {
       dialog.warnPop(data.message);
@@ -210,17 +199,6 @@ var creater = {
     var val = endInput.val();
     var stringArr = ['一天赛','二天赛','一周后','一个月','三个月'];
     endInput.empty();
-    
-    
-    // for (var i = 0; i < end.length; i++) {
-    //   if (val === end[i]) {
-    //     endInput.append('<option value="' + end[i] + '>' + stringArr[i] + '</option>');
-
-    //   } else {
-    //     endInput.append('<option value="' + end[i] + '">' +stringArr[i] +' '+ end[i] +'</option>');
-    //   }
-    // }
-
 
     for (var i = 0; i < end.length; i++) {
       if ($('#v1').val() === end[i]) {
@@ -232,19 +210,7 @@ var creater = {
     }
     function change(ele) {
         v1.innerHTML = ele.getElementsByTagName('option')[ele.selectedIndex].innerHTML.split(' ')[1];
-    }  
-    // setTimeout(function(){
-    //   endInput.find('option:eq(0)').html(endInput.find('option:eq(1)').val())
-    //   endInput.on('click',function(){
-    //   $(this).find('option:eq(0)').hide();
-    //   })
-    //   endInput.on('change',function(){
-    //   $(this).find('option:eq(0)').val($(this).find('option:checked').val()).show().html($(this).find('option:checked').val());
-    //   $(this).val($(this).find('option:checked').val());
-    //   })  
-    // })
-
-
+    }
   },
 
   //提交并创建赛事
@@ -297,10 +263,8 @@ $(document).ready(function() {
     promotion.ajaxLoading("end");
 
     if (data.code === 0) {
-
       var obj = data.result;
       $("#competitionName").val(obj.userName + "的荐股比赛");
-      //tempInput = obj.userName + "的荐股比赛";
       promotion.ajax(API.initCreate, {}, creater.page,null);
     } else {
       dialog.warnPop(data.message);

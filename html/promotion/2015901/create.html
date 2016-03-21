@@ -24,11 +24,7 @@
               <dt>开始时间</dt>
               <dd>
                 <select class="form-control select down setWidth" id="startTime">
-                  <option value="1">2015/09/10</option>
-                  <option value="2">2015/09/11</option>
-                  <option value="3">2015/09/14</option>
-                  <option value="4">2015/09/15</option>
-                  <option value="5">2015/09/16</option>
+                  <!-- <option value="1">2015/09/10</option> -->
                 </select>
                 <span class="c-text-time">AM</span>
               </dd>
@@ -40,17 +36,12 @@
               <dd>
                 <div style='position:relative;' class='clearfix'>
                     <select  id="s1" class="form-control select down setWidth fr">
-                        <option value="" id="v1">2015-01-02</option>
+                      <!-- <option value="" id="v1">2015-01-02</option> -->
                     </select>
                     <select class="form-control select down setWidth fr" onChange="change(this)" id="endTime" style="opacity: 0; position:absolute; z-index:99;">
-                      <option value="1">2015/09/10</option>
-                      <option value="2">2015/09/11</option>
-                      <option value="3">2015/09/14</option>
-                      <option value="4">2015/09/15</option>
-                      <option value="5">2015/09/16</option>
+                      <!-- <option value="1">2015/09/10</option> -->
                     </select>
                 </div>
-
                 <span class="c-text-time">PM</span>
               </dd>
             </dl>
@@ -92,7 +83,7 @@
             </p>
         </article>
         <div class="c-erweima">
-          <img src="../../../static/promotion/2015901/images/pic_erweima.jpg?ver=20151202">
+          <img src="../../../static/promotion/2015901/images/pic_erweima.jpg?ver=@@pageVersion">
         </div>
       </section>
     </div>
@@ -100,26 +91,26 @@
     <footer>
       <ul class="clearfix">
         <li>
-          <a class="active" href="create.html?ver=20151202">发起比赛</a>
+          <a class="active" href="create.html?ver=@@pageVersion">发起比赛</a>
         </li>
         <li>
-          <a href="list.html?ver=20151202">参赛记录</a>
+          <a href="list.html?ver=@@pageVersion">参赛记录</a>
         </li>
         <li>
-          <a href="home.html?ver=20151202">我的水平</a>
+          <a href="home.html?ver=@@pageVersion">我的水平</a>
         </li>
         <li>
-          <a href="wallet.html?ver=20151202">钱包</a>
+          <a href="wallet.html?ver=@@pageVersion">钱包</a>
         </li>
       </ul>
     </footer>
   </div>
   @@include('_commonJS.html')
-  <script src="../../../static/promotion/2015901/js/create.js"></script>
+  <script src="../../../static/promotion/2015901/js/create.js?ver=@@pageVersion"></script>
   <script type="text/javascript">
-      function change(ele) {
-        document.getElementById('v1').innerHTML = ele.getElementsByTagName('option')[ele.selectedIndex].innerHTML.split(' ')[1];
-      }
+    function change(ele) {
+      document.getElementById('v1').innerHTML = ele.getElementsByTagName('option')[ele.selectedIndex].innerHTML.split(' ')[1];
+    }
   </script>
 </body>
 </html>

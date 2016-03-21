@@ -52,8 +52,7 @@ var rankingHandler = {
 
     if (n < -0.5) {
       n = -0.500;
-    }
-    ;
+    };
 
     return (((n - (-0.5)) / 3.5).toFixed(4) * 100) + "%";
   },
@@ -87,7 +86,6 @@ var rankingHandler = {
     } else {
       return '100+';
     }
-
   },
 
   //成员
@@ -111,13 +109,9 @@ var rankingHandler = {
         if(arr[i].userName.length > 6) {
           arr[i].userName = arr[i].userName.substr(0,6) + '...';
         }
-
         html += this.trHtml(arr[i]);
-
       }
-
       html += '</tbody></table></div>';
-
       return html;
     }
   },
@@ -154,7 +148,6 @@ var rankingHandler = {
       var imgUrl = document.location.protocol + "//" + window.location.host + "/static/promotion/2015901/images/pic_share.jpg";
 
       promotion.wechatShow(false, title, desc, link, imgUrl);
-
     }
 
     if ($("#shareBtn")) {
@@ -164,7 +157,6 @@ var rankingHandler = {
 };
 
 $(document).ready(function () {
-
 
   var userId = promotion.getUrlParam("userId");
   var params;
@@ -178,9 +170,7 @@ $(document).ready(function () {
   }
 
   promotion.ajax(API.userRank, params, function (data) {
-
     promotion.ajaxLoading("end");
-
     if (data.code === 0) {
       var obj = data.result;
       var arr = data.result.datas;
@@ -195,10 +185,8 @@ $(document).ready(function () {
       if ($("#shareBtn")) {
         $("#shareBtn").on("click", promotion.wxShareNotice);
       }
-
     } else {
       dialog.warnPop(data.message);
     }
   }, promotion.ajaxFail);
-
 });

@@ -19,13 +19,12 @@ var detailHandler = {
   //变量，用于控制用户是否查看了广告
   isLook: false,
 
-  // 唯一id
+  //唯一id
   reqId: null,
 
   gameId: 0,
 
-  // 红包收益
-
+  //红包收益
   bonus: 0,
 
   goChange: function (obj) {
@@ -105,7 +104,6 @@ var detailHandler = {
 
   //详情页推广html
   advertHtml: function () {
-
     return template('detail/advert', {});
   },
 
@@ -125,13 +123,10 @@ var detailHandler = {
 
   //倒计时
   countDownHtml: function (s) {
-
     s = (s > 0) ? s : 0;
-
     var dm = 24 * 60 * 60 * 1000;
     var hm = 60 * 60 * 1000;
     var mm = 60 * 1000;
-
     var days = parseInt(s / dm, 10);
     var hours = parseInt((s / hm), 10);
     var minutes = parseInt((s / mm) % 60, 10);
@@ -157,20 +152,14 @@ var detailHandler = {
   //执行倒计时
   countdown: function () {
     if ($(".countdown").length) {
-
       detailHandler.iTimer = setInterval(function () {
-
         if (detailHandler.time > 1000) {
-
           detailHandler.time -= 1000;
-
           $(".countdown").html(detailHandler.countDownHtml(detailHandler.time));
-
         } else {
           $(".countdown").html(detailHandler.countDownHtml(0));
           clearTimeout(detailHandler.iTimer);
         }
-
       }, 1000);
     }
   },
@@ -230,13 +219,11 @@ var detailHandler = {
     }
 
     htmls += '</tbody></table></div>';
-
     return htmls;
   },
 
   //计算参赛进度条
   scaleWidth: function (n, m) {
-
     if (!m) {
       return '0%';
     } else {
@@ -246,7 +233,6 @@ var detailHandler = {
 
   //点赞
   stkLike: function () {
-
     return false;
     $("td.like-box").on("click", function (e) {
 
@@ -262,17 +248,12 @@ var detailHandler = {
       };
 
       promotion.ajax(API.stkLike, params, function (data) {
-
         if (data.code === 0) {
-
           likeObj.removeClass("icon-like").addClass("icon-likefill");
           likeObj.siblings("em").text(likeNum + 1);
           $this.unbind("click");
-
         } else {
-
           dialog.warnPop(data.message);
-
         }
       }, promotion.ajaxFail);
     });
@@ -280,42 +261,26 @@ var detailHandler = {
 
   //查看红包广告弹窗
   showAdvert: function () {
-
     $("#advertOne").on("click", function (e) {
-
       e.stopPropagation();
-
       var html = $("#advertHtml").html();
-
       dialog.commPop("advertView", function () {
-
         $("#advertView").empty().append(html).fadeIn();
-
       });
-
       detailHandler.isLook = true;
     });
   },
 
   //开户广告
   guosenAdvert: function () {
-
     $("#advertTwo").on("click", function (e) {
-
       e.stopPropagation();
-
       var html = $("#guosenHtml").html();
-
       dialog.commPop("advertView", function () {
-
         $("#advertView").empty().append(html).fadeIn();
-
         setTimeout(function () {
-
           $(".close-style-1").fadeIn();
-
         }, 2000);
-
       });
     });
   },
@@ -340,9 +305,7 @@ var detailHandler = {
   //第一次进来弹出广告
   isLookGuosen: function (obj) {
     if (window.localStorage) {
-
       var storage = window.localStorage;
-
       if (storage.getItem("qnAdGuosen") != "20151128" && obj.gameStatus === 2) {
         $("#advertTwo").trigger("click");
         storage.setItem("qnAdGuosen", "20151128");
@@ -352,13 +315,11 @@ var detailHandler = {
 
   //广告轮播
   advertAnimate: function () {
-
     var items = $("#advert a");
     var height = $("#advert").height();
     var len = items.length;
     var f = 0;
     var s = 1;
-
     for (var i = 0; i < len; i++) {
       items.eq(i).css("top", i * height);
     }
@@ -383,36 +344,25 @@ var detailHandler = {
         f = 0;
         s = 1;
       }
-
     }, 4500);
-
   },
 
   //查看比赛规则
   showCourse: function () {
-
     var $box = $('#dialogCourse')
     var html = $box.html();
-
     $("#course").on("click", function (e) {
-
       e.stopPropagation();
-
       dialog.commPop("_dialogCourse", function () {
-
         $('#_dialogCourse').html(html).fadeIn();
-
       });
     });
-
     detailHandler.newUserNotice();
   },
 
   //下注弹框
   showStkInfo: function (obj) {
-
     var gameStatus = obj.gameStatus
-
     var Pop = function (data) {
       this.popId = 'stkInfoView'
       this.data = data
@@ -519,61 +469,33 @@ var detailHandler = {
       }
     }
 
-    //if(gameStatus === 2) { // 比赛结束, 不能下注
-    //  return false
-    //}
-
     $("#J_listBody").find('tr').on("click", function (e) {
-
       e.stopPropagation();
-
-      //if(gameStatus === 1){
-      //  //detailHandler.message('比赛进行中, 无法下注')
-      //  return false
-      //}
-      //if(gameStatus === 3){
-      //  //detailHandler.message('比赛发起失败, 无法下注')
-      //  return false
-      //}
-
       var stkId = $(this).attr("id")
-
       promotion.ajax(API.stkDetail, {gameStkId: stkId}, function (data) {
-
         if (data.code === 0) {
-
           new Pop(data.result).init()
-
         } else {
-
           dialog.warnPop(data.message);
-
         }
-
       }, promotion.ajaxFail);
     });
-
   },
 
   // 结束弹框
   endpop: function (obj) {
-
     var pop = function (data) {
-
-      var
-        id = 'endpop',
-        _data = {
-          isWinner: data.isWinner, // 是否股神
-          userName: data.userName, // 股神昵称
-          rcmdYield: data.rcmdYield,// 荐股收益
-          betYield: data.betYield, // 买码收益
-          rmb: data.rmb === null ? 0 : data.rmb   // 牛币换算人名币
-        };
+      var id = 'endpop',
+          _data = {
+            isWinner: data.isWinner, // 是否股神
+            userName: data.userName, // 股神昵称
+            rcmdYield: data.rcmdYield,// 荐股收益
+            betYield: data.betYield, // 买码收益
+            rmb: data.rmb === null ? 0 : data.rmb   // 牛币换算人名币
+          };
 
       dialog.commPop(id, function () {
-
         var $pop = $("#" + id)
-
         // 文字动画
         function textAnimate() {
           var
@@ -612,8 +534,6 @@ var detailHandler = {
 
         $pop.html(detailHandler.endpopHtml(_data)).fadeIn(200, textAnimate);
         $pop.find('.handlebtn').on('click', btnHandle);
-        // 加上下面这句会导致分享没有了
-        //$pop.click(dialog.remove);
       });
     }
 
@@ -644,26 +564,18 @@ var detailHandler = {
 
   //滚动固定按钮
   scrollBtnFixed: function () {
-
     if ($(".d-submit-wrap").length) {
-
       var wrap = $(".d-submit-wrap");
       var box = $(".d-submit-box");
       var height = wrap.offset().top;
       var mheight = wrap.height();
       var theight = height + mheight;
       var fixTimer;
-
       $(document).on("scroll", function () {
-
         var scrollHright = $(document).scrollTop();
-
         clearTimeout(fixTimer);
-
         if (box) {
-
           if (scrollHright > theight) {
-
             fixTimer = setTimeout(function () {
               box.addClass("fixed");
               box.css("top", -mheight);
@@ -681,7 +593,6 @@ var detailHandler = {
       }
 
       document.getElementById("dList").addEventListener("click", touchStart, false);
-
     }
   },
 
@@ -695,7 +606,6 @@ var detailHandler = {
     if ($("#attentionBtn")) {
       $("#attentionBtn").on("click", promotion.wxAttention);
     }
-
   },
 
   //自定义分享
@@ -766,13 +676,9 @@ var detailHandler = {
 
   //新用户弹出提示
   newUserNotice: function () {
-
     var type = promotion.getUrlParam("userType");
-
     if (type === "new" && detailHandler.userType) {
-
       detailHandler.userType = false;
-
       $("#course").trigger("click");
     }
   },
@@ -823,14 +729,9 @@ var detailHandler = {
 
   //判断是否刷新
   needRefreshData: function (obj) {
-
     if (obj.gameStatus === 0 || obj.gameStatus === 1) {
-
-      //return;
       detailHandler.tTimer = setTimeout(detailHandler.refreshDatas, 10000);
-
     } else {
-
       clearTimeout(detailHandler.tTimer);
     }
   },
@@ -892,5 +793,4 @@ var detailHandler = {
 $(document).ready(function () {
   detailHandler.reqId = promotion.onlyNum();
   detailHandler.pageHtml();
-
 });

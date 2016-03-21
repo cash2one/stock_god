@@ -11,12 +11,6 @@ var stkComplete = {
       var $this = $(this);
       stkComplete.searchData(txt, $this);
     });
-    //兼容IOS输入中文
-    //document.getElementById('searchInput').addEventListener('input', function (e) {
-    //  var txt = e.target.value;
-    //  var $this = $(this);
-    //  stkComplete.searchData(txt, $this);
-    //});
   },
   searchData : function (t, o) {
     if (t.length > 0) {
@@ -155,36 +149,7 @@ var joiner = {
       }, 150);
     });
   },
-  //// 获取我的名字
-  //getUserInfo: function() {
-  //  var userId = promotion.getUrlParam("userId");
-  //  var params;
-  //
-  //  if (userId) {
-  //    params = {
-  //      gameUserId: userId
-  //    };
-  //
-  //    //隐藏掉导航
-  //    $("footer").remove();
-  //  } else {
-  //    params = {};
-  //  }
-  //
-  //  promotion.ajax(API.myInfo, {}, function(data) {
-  //
-  //    promotion.ajaxLoading("end");
-  //
-  //    if (data.code === 0) {
-  //
-  //      var obj = data.result;
-  //      $("#competitionName").val(obj.userName + "的荐股比赛")
-  //      promotion.ajax(API.initCreate, {}, creater.page,null);
-  //    } else {
-  //      dialog.warnPop(data.message);
-  //    }
-  //  }, promotion.ajaxFail);
-  //},
+
   //初始化页面
   page: function () {
     var gameId = promotion.getUrlParam("gameId");
@@ -292,14 +257,6 @@ var joiner = {
         $searchInput.focus();
         return false;
       }
-      //if (!reason) {
-      //  $reason.focus();
-      //  return false;
-      //}
-      //if (reason && reason.length > 50) {
-      //  dialog.warnPop("推荐理由不能超过50个字")
-      //  return false;
-      //}
       var params = {
         reqId      : joiner.reqId,
         gameEventId: promotion.getUrlParam("gameId"),

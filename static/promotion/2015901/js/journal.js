@@ -1,8 +1,6 @@
 /*
  *我的水平
  */
-
-
 var journalHandler = {
   readId: 0,
   readId2: 0,
@@ -78,14 +76,10 @@ var journalHandler = {
         promotion.ajax(API.walletList, bonusParams, function(data) {
 
           if (data.code === 0) {
-
             var bonusObj = data.result;
-
             journalHandler.readId2 = bonusObj.readId
             bonusObj.first = 1
-
             var _bonusListHtml = template('journal/bonusList', bonusObj)
-
             var bonusMore = journalHandler.moreBtnHtml(data.result.hasNext);
             // 首次加载
             _redListHtml = '<div class="jo-box niubi active" id="redList">' +_redListHtml + '</div>'
@@ -97,10 +91,8 @@ var journalHandler = {
               journalHandler.clickMoreBtn()
             });
             journalHandler.changeTabs();
-
           }
         }, promotion.ajaxFail);
-
       } else {
         dialog.warnPop(data.message);
       }

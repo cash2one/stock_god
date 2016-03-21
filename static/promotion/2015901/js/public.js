@@ -805,10 +805,8 @@ var staAPIS = {
 var API = devAPIS
 
 $(function () {
-
   promotion.fontSize();
   promotion.gotoTop();
   promotion.btnActiveBg();
   promotion.baidu();
-
 });

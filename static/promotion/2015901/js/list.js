@@ -9,12 +9,9 @@ var listHandler = {
 
   //渲染列表,根据状态显示不同html
   itemHtml : function(obj){
-
     if(obj){
       var status = obj.gameStatus;
-
       switch(status) {
-
         //等待开赛
         case 0:
           return  '<a href="detail.html?gameId=' + obj.gameEventId + '">'

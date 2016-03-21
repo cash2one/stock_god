@@ -132,8 +132,6 @@ var homeHandler = {
           t1 = setInterval(drawChart1, 1);
         }
       } else {
-        // min 67deg 0 -> 180
-
         if (deg2 >= -(292 - (120 + (obj.cYield * 10 * 120)))) {
           clearInterval(t2);
         }
@@ -142,7 +140,6 @@ var homeHandler = {
       $("#chartPie2").css("-o-transform", "rotate(" + deg2 + "deg)");
       $("#chartPie2").css("-moz-transform", "rotate(" + deg2 + "deg)");
       $("#chartPie2").css("-webkit-transform", "rotate(" + deg2 + "deg)");
-
 
       if (obj.cYield > 0) {
         if (obj.cYield <= 0.2) {
@@ -165,7 +162,6 @@ var homeHandler = {
           '-webkit-transform': 'rotate(' + (99 - (fuYuan * 100)) + 'deg)'
         })
       }
-
     };
 
     init();
@@ -264,5 +260,4 @@ $(document).ready(function() {
       dialog.warnPop(data.message);
     }
   }, promotion.ajaxFail);
-
 });

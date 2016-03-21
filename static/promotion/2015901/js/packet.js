@@ -3,7 +3,6 @@
  * Created by ayou on 2016-03-18.
  */
 
-
 $(function() {
   var _html = '';
   promotion.ajaxLoading("end");
