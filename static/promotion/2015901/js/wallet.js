@@ -4,6 +4,8 @@
 
 var walletHandler = {
   headerHtml: function(data) {
+    data.totalBonus = data.totalBonus.toFixed(2);
+    data.balAmount = data.balAmount.toFixed(2);
     return template('wallet/header', data)
   },
 
@@ -28,7 +30,7 @@ $(function() {
 
       $("#main").html(htmls).fadeIn(250)
       // 如果红包为零，领取红包不显示
-      if(data.result.totalBonus === 0) {
+      if(data.result.totalBonus <= 0) {
         $('.w-packet').hide();
       }
     } else {

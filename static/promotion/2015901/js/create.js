@@ -291,7 +291,7 @@ var creater = {
 };
 
 $(document).ready(function() {
-   
+   //var tempInput = '';
   creater.reqId = promotion.onlyNum();
   promotion.ajax(API.myInfo, {}, function(data) {
 
@@ -300,7 +300,8 @@ $(document).ready(function() {
     if (data.code === 0) {
 
       var obj = data.result;
-      $("#competitionName").val(obj.userName + "的荐股比赛")
+      $("#competitionName").val(obj.userName + "的荐股比赛");
+      //tempInput = obj.userName + "的荐股比赛";
       promotion.ajax(API.initCreate, {}, creater.page,null);
     } else {
       dialog.warnPop(data.message);
@@ -317,8 +318,13 @@ $(document).ready(function() {
   $('#competitionName').focus(function() {
     if(first) {
       $('#competitionName').val('');
+      $('#competitionName').css('color','white !important');
       first = false;
     }
   });
-
+  //$('#competitionName').blur(function() {
+  //  if(!$('#competitionName').val()) {
+  //    $('#competitionName').val(tempInput);
+  //  }
+  //});
 });

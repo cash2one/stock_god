@@ -213,11 +213,12 @@ var joiner = {
             $("#gravatar").attr("src", result.userIcon);
 
             // 默认投入的资金
-            var select_value = Math.floor(data.result.balAmount / 2)
-            select_value = select_value % 2 === 0 ? select_value : select_value + 1;
+            var raw_value = Math.floor(data.result.balAmount / 2)
+            select_value = raw_value % 2 === 0 ? raw_value : raw_value + 1;
             // 选择列表
+            var index = raw_value > 50 ? 50 : raw_value;
             var list = []
-            for (var i=0;i<=select_value;i++){
+            for (var i=0;i<=index;i++){
               list.push(i);
             }
             var select = template('join/select', {list: list,select_value: select_value})
