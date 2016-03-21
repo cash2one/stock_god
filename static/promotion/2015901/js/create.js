@@ -313,8 +313,12 @@ $(document).ready(function() {
   promotion.wechatShow(true);
 
   // 比赛名输入框
+  var first = true
   $('#competitionName').focus(function() {
+    if(first) {
       $('#competitionName').val('');
+      first = false;
+    }
   });
 
 });

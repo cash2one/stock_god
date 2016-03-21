@@ -195,6 +195,15 @@ var joiner = {
       promotion.ajax(API.initRcmdStk, params, function (data) {
         if (data.code === 0) {
           if (data.result) {
+            // 生成头部参赛人或创始人信息代码
+            var obj = {
+              'isCreate':data.result.isCreate,
+              'userName':data.result.userName,
+              'eventName':data.result.eventName
+            };
+            var _headerHtml = template('join/joinType',obj);
+            $('#j-steps').html(_headerHtml);
+
             var result = {
               userIcon: data.result.userIcon,
               isNew : data.result.isNew,
@@ -205,14 +214,12 @@ var joiner = {
 
             // 默认投入的资金
             var select_value = Math.floor(data.result.balAmount / 2)
+            select_value = select_value % 2 === 0 ? select_value : select_value + 1;
             // 选择列表
             var list = []
-            for (i=0;i<=select_value;i++){
+            for (var i=0;i<=select_value;i++){
               list.push(i);
             }
-
-            //select_value % 2 === 0 ? null : select_value ++
-            //select_value = select_value > 100 ? 100 : select_value
             var select = template('join/select', {list: list,select_value: select_value})
             $("#addNiuBi").html(select);
             $("#main").fadeIn(250);

@@ -597,8 +597,8 @@ var HOST = {
 
   /*获取域名和端口*/
   getHost: function () {
-    return 'http://192.168.1.19'
-    //return window.location.protocol + "//" + window.location.host;
+    //return 'http://192.168.1.19'
+    return window.location.protocol + "//" + window.location.host;
   }
 };
 
@@ -810,5 +810,5 @@ $(function () {
   promotion.gotoTop();
   promotion.btnActiveBg();
   //promotion.baidu();
-  FastClick.attach(document.body);
+  //FastClick.attach(document.body);
 });
