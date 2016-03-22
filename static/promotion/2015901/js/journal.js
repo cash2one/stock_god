@@ -26,7 +26,7 @@ var journalHandler = {
   advertRequest: function() {
 
     var params = {
-      positionGroup : 1004,
+      positionGroup : 2101,
       count : 5
     };
 
