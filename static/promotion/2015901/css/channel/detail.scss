@@ -444,14 +444,15 @@
 }
 
 .dialog .d-rule{
-  position: relative;
+  /* position: relative;
   top: 50% !important;
   left: 50%;
   transform: translate3D(-50%, -50%, 0);
+  -webkit-transform: translate3D(-50%, -50%, 0);
   margin-left: 0;
   width: 85%;
   padding: pxToRem(20px);
-  overflow: hidden;
+  overflow: hidden; */
 }
 .courseText{
   overflow-y: scroll;
