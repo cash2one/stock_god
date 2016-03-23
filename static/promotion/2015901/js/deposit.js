@@ -105,7 +105,7 @@ var depositHandler = {
   wechatPay: function(data) {
     wx.chooseWXPay({
       timestamp: data.result.timeStamp,
-      nonceStr: data.result.noncestr,
+      nonceStr: data.result.nonceStr,
       package: data.result.package,
       signType: data.result.signType,
       paySign: data.result.sign,

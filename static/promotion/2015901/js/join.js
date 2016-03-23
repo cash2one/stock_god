@@ -234,7 +234,7 @@ var joiner = {
   //投入模拟资金下拉的文字信息提示, 新老用户显示对应文字提示
   selectTips : function (result) {
     var tips = {
-      new: '模拟投资股票, 赚收益. 初始赠送40牛币',
+      new: '模拟投资股票, 赚收益. 初始赠送60牛币',
       many: '当前余额：<span class="j-note-bal">' + result.balAmount + '</span>牛币'
     }
     $('#J_remark').html(result.isNew ? tips.new : tips.many)
