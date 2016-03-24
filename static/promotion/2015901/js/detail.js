@@ -533,7 +533,15 @@ var detailHandler = {
         }
 
         $pop.html(detailHandler.endpopHtml(_data)).fadeIn(200, textAnimate);
-        $pop.find('.handlebtn').on('click', btnHandle);
+        $pop.find('.handlebtn').on('click', function(e){
+          e.preventDefault();
+          btnHandle();
+        });
+
+        $(".dialog").on("click", function () {
+          $(this).remove();
+          $('html').removeClass("pop-up-lock");
+        });
       });
     }
 
@@ -790,7 +798,7 @@ var detailHandler = {
   }
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
   detailHandler.reqId = promotion.onlyNum();
   detailHandler.pageHtml();
 });

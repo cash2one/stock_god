@@ -314,7 +314,7 @@ var promotion = {
 
     $(".dialog").remove();
 
-    var html = '<div class="dialog">' + '<div class="simple-wrap wx-attention">' + '<div class="close"></div>' + '<div class="title1">恭喜你荐股成功！</div>' + '<div class="title2 text-yellow">获奖红包通过[一起牛]公众号发放</div>' + '<div class="erweima"><img src="../src/images/pic_erweima.jpg"/></div>' + '<div class="title2">长按二维码<span class="text-yellow">立即关注</span></div>' + '</div>' + '</div>';
+    var html = '<div class="dialog">' + '<div class="simple-wrap wx-attention">' + '<div class="close"></div>' + '<div class="title1">恭喜你荐股成功！</div>' + '<div class="title2 text-yellow">获奖红包通过[一起牛]公众号发放</div>' + '<div class="erweima"><img src="../../../static/promotion/2015901/images/pic_erweima.jpg"/></div>' + '<div class="title2">长按二维码<span class="text-yellow">立即关注</span></div>' + '</div>' + '</div>';
 
     $('html').addClass("pop-up-lock");
     $('body').append(html);
@@ -516,7 +516,6 @@ var dialog = {
 
     $("html").addClass("pop-up-lock");
     $("body").append(_dialogHtml.join(''));
-    $(".dialog").fadeIn();
 
     var wrap = $(".dialog .simple-wrap");
     var dHeight = wrap.height();
@@ -528,6 +527,8 @@ var dialog = {
       wrap.css("top", "0.2rem");
       wrap.css("marginBottom", "0.2rem");
     }
+
+    $(".dialog").fadeIn();
 
     setTimeout(function () {
       dialog.remove();
@@ -543,13 +544,12 @@ var dialog = {
     $("body").append(html);
     callback();
 
-    //var wrap = $(".dialog .simple-wrap");
     var wrap = $("#" + id).find('.simple-wrap');
     var dHeight = wrap.height();
     var wHeight = $(window).height();
 
     if (dHeight < wHeight) {
-      //wrap.css("marginTop", -dHeight / 2);
+      wrap.css("marginTop", -dHeight / 2);
     } else {
       wrap.css("top", "0.2rem");
       wrap.css("marginBottom", "0.2rem");
@@ -560,13 +560,9 @@ var dialog = {
 
   // 公用弹窗关闭操作
   close: function (callback) {
-
     $(document).on("click", ".close-dialog-btn", function (e) {
-
       e.stopPropagation();
-
       dialog.remove();
-
     });
   }
 };

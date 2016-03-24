@@ -7,6 +7,9 @@ var depositHandler = {
   // 支付触发
   canPost: true,
 
+  // 微信配置信息,
+  options: {},
+
   //请求广告
   advertRequest: function() {
 
@@ -21,14 +24,14 @@ var depositHandler = {
         if (data.result) {
           var ads = data.result;
 
-          $("#main").prepend(template('deposit/banner', data));
+          $('#main').prepend(template('deposit/banner', data));
 
           if (ads.length > 1) {
-            promotion.adAddSwiping("deAdvertWrap");
+            promotion.adAddSwiping('deAdvertWrap');
           }
 
           setTimeout(function() {
-            $("#adCtrls").show();
+            $('#adCtrls').show();
           }, 500);
         }
       } else {
@@ -53,11 +56,8 @@ var depositHandler = {
 
         $("#main").show();
 
-        //请求广告
-        depositHandler.advertRequest();
+        // 绑定充值事件
         depositHandler.depositStart();
-
-        //微信分享
 
       } else {
         dialog.warnPop(data.message);
@@ -69,9 +69,6 @@ var depositHandler = {
   goodListHtml: function(obj) {
     return template('deposit/list', obj);
   },
-
-  // 微信配置信息,
-  options: {},
 
   // 微信配置初始化
   wechatInit: function() {
@@ -90,6 +87,7 @@ var depositHandler = {
     }
   },
 
+  // 微信配置
   wechatConfig: function(options) {
     wx.config({
       debug: false,
@@ -166,6 +164,7 @@ var depositHandler = {
 };
 
 $(document).ready(function() {
+  depositHandler.advertRequest();
   depositHandler.goodListRequest();
   depositHandler.wechatInit();
 });
