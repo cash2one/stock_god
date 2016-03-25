@@ -206,9 +206,9 @@ module.exports = function(grunt) {
         files: ['<%= cfg.src.sass %>/**/*.css'],
         tasks: ['css']
       },
-      tomd: {
+      tmod: {
         files: ['<%= cfg.src.tpls %>/**/*.tpl'],
-        tasks: ['tmod']
+        tasks: ['tmod', 'clean:tmodCache']
       },
       uglify: {
         files: ['<%= cfg.src.js %>/**/*.js'],
