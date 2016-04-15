@@ -35,6 +35,14 @@
     }
   }
 }
+.c-header-em {
+  position: absolute;
+  top: pxToRem(20px);
+  right: 0;
+  font-size: pxToRem(12px);
+  z-index: 1;
+  color: $white;
+}
 
 //表单
 .c-form-wrap,

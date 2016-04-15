@@ -306,9 +306,9 @@ var detailHandler = {
   isLookGuosen: function (obj) {
     if (window.localStorage) {
       var storage = window.localStorage;
-      if (storage.getItem("qnAdGuosen") != "20151128" && obj.gameStatus === 2) {
+      if (storage.getItem("qnAdGuosen") != "20160415" && obj.gameStatus === 2) {
         $("#advertTwo").trigger("click");
-        storage.setItem("qnAdGuosen", "20151128");
+        storage.setItem("qnAdGuosen", "20160415");
       }
     }
   },
